@@ -14,7 +14,7 @@ import {
     projectError
 } from '../reducers/project-state';
 
-import {loadProject} from 'scratch-hacks';
+import {loadExtension, loadProject} from 'scratch-hacks';
 
 /*
  * Higher Order Component to manage events emitted by the VM
@@ -30,6 +30,8 @@ const vmManagerHOC = function (WrappedComponent) {
             ]);
         }
         componentDidMount () {
+            loadExtension(this.props.vm);
+
             if (!this.props.vm.initialized) {
                 this.audioEngine = new AudioEngine();
                 this.props.vm.attachAudioEngine(this.audioEngine);
