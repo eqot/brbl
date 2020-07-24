@@ -443,6 +443,10 @@
     {
       "packageName": "scratch-vm",
       "projectFolder": "vendor/scratch-vm"
+    },
+    {
+      "packageName": "scratch-hacks",
+      "projectFolder": "scratch-hacks"
     }
   ]
 }
