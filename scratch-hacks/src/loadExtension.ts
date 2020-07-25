@@ -1,4 +1,4 @@
-import { getQueries } from './utils'
+import { getQueries, fetchFile } from './utils'
 
 const loadedExtensions = new Map()
 
@@ -19,9 +19,7 @@ export async function loadExtension(vm: any) {
     // of https://github.com/LLK/scratch-vm/issues/1125. So, as a workaround, this uses
     // _registerInternalExtension() to bypass the issue.
 
-    const request = new Request(extensionUrl, { mode: 'cors' })
-
-    const response = await fetch(request)
+    const response = await fetchFile(extensionUrl)
     if (!response.ok) {
       return
     }
