@@ -1,6 +1,8 @@
 import { getQueries, fetchFile } from './utils'
 
-const loadedExtensions = new Map()
+if (!window.loadedExtensions) {
+  window.loadedExtensions = new Map()
+}
 
 export async function loadExtension(vm: any) {
   const queries = getQueries()
@@ -41,10 +43,10 @@ export async function loadExtension(vm: any) {
     const serviceName = extensionManager._registerInternalExtension(extensionInstance)
     extensionManager._loadedExtensions.set(extensionUrl, serviceName)
 
-    loadedExtensions.set(extensionInstance.getInfo().id, extensionInstance)
+    window.loadedExtensions.set(extensionInstance.getInfo().id, extensionInstance)
   }
 }
 
 export function isExtensionLoaded(extensionUrl: string) {
-  return loadedExtensions.has(extensionUrl)
+  return window.loadedExtensions.has(extensionUrl)
 }
