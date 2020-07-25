@@ -7,8 +7,8 @@ export function getQueries(): any {
 export async function fetchFile(url: string): Promise<any> {
   if (url.startsWith('https://github.com/')) {
     url = url.replace(
-      /https:\/\/github.com\/(.+)\/(.+)\/raw\/(.+)/,
-      'https://raw.githubusercontent.com/$1/$2/$3'
+      /https:\/\/github.com\/(.+)\/(.+)\/(raw|blob)\/(.+)/,
+      'https://raw.githubusercontent.com/$1/$2/$4'
     )
   }
 
