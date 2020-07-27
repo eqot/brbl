@@ -445,6 +445,10 @@
       "projectFolder": "vendor/scratch-vm"
     },
     {
+      "packageName": "scratch-blocks",
+      "projectFolder": "vendor/scratch-blocks"
+    },
+    {
       "packageName": "scratch-hacks",
       "projectFolder": "scratch-hacks"
     }

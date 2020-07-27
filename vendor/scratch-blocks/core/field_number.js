@@ -363,4 +363,19 @@ Blockly.FieldNumber.prototype.onHide_ = function() {
   Blockly.DropDownDiv.content_.removeAttribute('aria-haspopup');
 };
 
+Blockly.FieldNumber.prototype.classValidator = function(text) {
+  var validatedText = text.replace(/[０-９]/g, function(s) {
+    return String.fromCharCode(s.charCodeAt(0) - 65248);
+  }).replace(/[^\\x01-\\x7E\\xA1-\\xDF]/g, '');
+
+  if (text !== validatedText) {
+    var htmlInput = Blockly.FieldTextInput.htmlInput_;
+    if (htmlInput) {
+      htmlInput.value = validatedText;
+    }
+  }
+
+  return validatedText;
+};
+
 Blockly.Field.register('field_number', Blockly.FieldNumber);
