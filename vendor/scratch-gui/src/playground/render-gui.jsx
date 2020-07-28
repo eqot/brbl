@@ -7,6 +7,8 @@ import GUI from '../containers/gui.jsx';
 import HashParserHOC from '../lib/hash-parser-hoc.jsx';
 import log from '../lib/log.js';
 
+import {isFullScreen} from 'scratch-hacks';
+
 const onClickLogo = () => {
     window.location = 'https://scratch.mit.edu';
 };
@@ -75,6 +77,7 @@ export default appTarget => {
             /> :
             <WrappedGui
                 canEditTitle
+                isFullScreen={isFullScreen}
                 backpackVisible
                 showComingSoon
                 backpackHost={backpackHost}
