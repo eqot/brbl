@@ -1,3 +1,3 @@
-export * from './loadExtension'
-export * from './loadProject'
+export * from './extension'
+export * from './project'
 export * from './screen'

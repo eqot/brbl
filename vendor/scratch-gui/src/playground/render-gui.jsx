@@ -77,7 +77,7 @@ export default appTarget => {
             /> :
             <WrappedGui
                 canEditTitle
-                isFullScreen={isFullScreen}
+                isFullScreen={isFullScreen()}
                 backpackVisible
                 showComingSoon
                 backpackHost={backpackHost}
