@@ -207,7 +207,7 @@ var handleTelemetryModalOptOut = function handleTelemetryModalOptOut() {
     onTelemetryModalOptOut: handleTelemetryModalOptOut
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WrappedGui, {
     canEditTitle: true,
-    isFullScreen: scratch_hacks__WEBPACK_IMPORTED_MODULE_7__["isFullScreen"],
+    isFullScreen: Object(scratch_hacks__WEBPACK_IMPORTED_MODULE_7__["isFullScreen"])(),
     backpackVisible: true,
     showComingSoon: true,
     backpackHost: backpackHost,
