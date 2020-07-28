@@ -184,11 +184,11 @@ var extensionWorker = new ExtensionWorker();
 global.Scratch.extensions = {
   register: extensionWorker.register.bind(extensionWorker)
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../common/temp/node_modules/webpack/buildin/global.js */ "../../common/temp/node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../common/temp/node_modules/webpack-cli/node_modules/webpack/buildin/global.js */ "../../common/temp/node_modules/webpack-cli/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
-/***/ "../../common/temp/node_modules/webpack/buildin/global.js":
+/***/ "../../common/temp/node_modules/webpack-cli/node_modules/webpack/buildin/global.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
   \***********************************/
