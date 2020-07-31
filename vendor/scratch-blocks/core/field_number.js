@@ -366,7 +366,7 @@ Blockly.FieldNumber.prototype.onHide_ = function() {
 Blockly.FieldNumber.prototype.classValidator = function(text) {
   var validatedText = text.replace(/[０-９]/g, function(s) {
     return String.fromCharCode(s.charCodeAt(0) - 65248);
-  }).replace(/[^\\x01-\\x7E\\xA1-\\xDF]/g, '');
+  }).replace(/[ー−]/g, '-').replace(/[^\x01-\x7E\xA1-\xDF]/g, '');
 
   if (text !== validatedText) {
     var htmlInput = Blockly.FieldTextInput.htmlInput_;
