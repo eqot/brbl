@@ -30,3 +30,14 @@ function loadBase64ProjectInUrl(base64): ArrayBuffer {
 
   return buffer
 }
+
+export function startProject(vm: any): void {
+  const queries = getQueries()
+  if (!queries.start) {
+    return
+  }
+
+  vm.runtime.once('PROJECT_LOADED', () => {
+    vm.greenFlag()
+  })
+}
