@@ -14,7 +14,7 @@ import {
     projectError
 } from '../reducers/project-state';
 
-import {loadExtension, loadProject, startProject} from 'scratch-hacks';
+import {loadExtension, loadProject, importProject, startProject} from 'scratch-hacks';
 
 /*
  * Higher Order Component to manage events emitted by the VM
@@ -63,6 +63,8 @@ const vmManagerHOC = function (WrappedComponent) {
                 .then(projectData => projectData || this.props.projectData)
                 .then(projectData => this.props.vm.loadProject(projectData))
                 .then(() => {
+                    importProject(this.props.vm);
+
                     this.props.onLoadedProject(this.props.loadingState, this.props.canSave);
                     // Wrap in a setTimeout because skin loading in
                     // the renderer can be async.
