@@ -394,7 +394,27 @@ class VirtualMachine extends EventEmitter {
                 return Promise.reject(error);
             });
 
-        return validationPromise;
+        return validationPromise
+            .then(validatedInput => this.deserializeAndAppendProject(validatedInput[0], validatedInput[1]));
+    }
+
+    deserializeAndAppendProject (projectJSON, zip) {
+        const runtime = this.runtime;
+        const deserializePromise = function () {
+            const projectVersion = projectJSON.projectVersion;
+            if (projectVersion === 2) {
+                const sb2 = require('./serialization/sb2');
+                return sb2.deserialize(projectJSON, runtime, false, zip);
+            }
+            if (projectVersion === 3) {
+                const sb3 = require('./serialization/sb3');
+                return sb3.deserialize(projectJSON, runtime, zip);
+            }
+            return Promise.reject('Unable to verify Scratch Project version.');
+        };
+        return deserializePromise()
+            .then(({targets, extensions}) =>
+                this.installTargets(targets, extensions, true));
     }
 
     updateBlockIds (blocks) {

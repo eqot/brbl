@@ -46,36 +46,6 @@ export async function importProject(vm: any): Promise<ArrayBuffer | void> {
   // console.log(buffer)
 
   const project = await vm.parseProject(buffer)
-  // console.log(project)
-
-  const { blocks } = project[0].targets[1]
-  // console.log(blocks)
-
-  const editingTarget = vm.editingTarget //runtime.getEditingTarget()
-  // console.log(editingTarget)
-
-  const importingBlocks = []
-  for (const key of Object.keys(blocks)) {
-    const block = {
-      ...blocks[key],
-      id: key
-    }
-    importingBlocks.push(block)
-  }
-
-  // console.log(importingBlocks)
-  // vm.updateBlockIds(importingBlocks)
-  // console.log(importingBlocks)
-
-  console.log(editingTarget.blocks._blocks)
-  for (const block of importingBlocks) {
-    console.log(block)
-    editingTarget.blocks.createBlock(block)
-  }
-  console.log(editingTarget.blocks._blocks)
-  editingTarget.blocks.updateTargetSpecificBlocks(editingTarget.isStage)
-
-  // vm.refreshWorkspace()
 }
 
 export function startProject(vm: any): void {
