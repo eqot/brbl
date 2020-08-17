@@ -1,4 +1,5 @@
 import base64js from 'base64-js'
+import scratchParser from 'scratch-parser'
 
 import { getQueries, fetchFile } from './utils'
 
@@ -43,9 +44,22 @@ export async function importProject(vm: any): Promise<ArrayBuffer | void> {
   }
 
   const buffer = await response.arrayBuffer()
-  // console.log(buffer)
 
-  const project = await vm.parseProject(buffer)
+  const [projectJson, zip] = await parseProject(buffer)
+  const { targets, extensions } = await vm.deserializeProject3(projectJson, zip)
+  await vm.installTargets(targets, extensions, true)
+}
+
+function parseProject(buffer: ArrayBuffer): Promise<object> {
+  return new Promise((resolve, reject) => {
+    scratchParser(buffer, false, (error, project) => {
+      if (error) {
+        return reject(error)
+      }
+
+      resolve(project)
+    })
+  })
 }
 
 export function startProject(vm: any): void {
