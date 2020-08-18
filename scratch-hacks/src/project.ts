@@ -47,7 +47,26 @@ export async function importProject(vm: any): Promise<ArrayBuffer | void> {
 
   const [projectJson, zip] = await parseProject(buffer)
   const { targets, extensions } = await vm.deserializeProject3(projectJson, zip)
-  await vm.installTargets(targets, extensions, true)
+  // await vm.installTargets(targets, extensions, true)
+
+  const editingTarget = vm.editingTarget //runtime.getEditingTarget()
+
+  const blocks = targets[1].blocks._blocks
+  const importingBlocks = []
+  for (const key of Object.keys(blocks)) {
+    const block = {
+      ...blocks[key],
+      id: key
+    }
+    importingBlocks.push(block)
+  }
+
+  for (const block of importingBlocks) {
+    editingTarget.blocks.createBlock(block)
+  }
+  editingTarget.blocks.updateTargetSpecificBlocks(editingTarget.isStage)
+
+  vm.refreshWorkspace()
 }
 
 function parseProject(buffer: ArrayBuffer): Promise<object> {
