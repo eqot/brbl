@@ -4,15 +4,14 @@ if (!window.loadedExtensions) {
   window.loadedExtensions = new Map()
 }
 
-export async function loadExtension(vm: any) {
-  const queries = getQueries()
-  if (!queries.ext) {
+export async function loadExtension(vm: any, url?: string) {
+  const extensionUrls = [getQueries().ext || url].flat()
+  if (!extensionUrls) {
     return
   }
 
   const { extensionManager } = vm
 
-  const extensionUrls = Array.isArray(queries.ext) ? queries.ext : [queries.ext]
   for (const extensionUrl of extensionUrls) {
     // await vm.extensionManager.loadExtensionURL(extensionUrl)
 

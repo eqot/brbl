@@ -3,22 +3,29 @@ import ReactDOM from 'react-dom'
 
 import { Menu, MenuItemProps } from './components/menu'
 
+import { loadExtension } from './extension'
+import { importProject } from './project'
+
 let initialized = false
 
-const menuItems: MenuItemProps[] = [
-  {
-    label: '拡張機能を読み込む',
-    onClick: () => {
-      console.log('ext')
+const menuItems = vm => {
+  return [
+    {
+      label: '拡張機能を読み込む',
+      onClick: () => {
+        const url = prompt('拡張機能を読み込む')
+        loadExtension(vm, url)
+      }
+    },
+    {
+      label: 'プロジェクトを読み込む',
+      onClick: () => {
+        const url = prompt('プロジェクトを読み込む')
+        importProject(vm, url)
+      }
     }
-  },
-  {
-    label: 'プロジェクトを読み込む',
-    onClick: () => {
-      console.log('prj')
-    }
-  }
-]
+  ]
+}
 
 export function injectMenu(vm: any) {
   if (initialized) {
@@ -33,7 +40,7 @@ export function injectMenu(vm: any) {
       const menuItem = document.createElement('div')
       menuRoot.appendChild(menuItem)
 
-      ReactDOM.render(<Menu items={menuItems} />, menuItem)
+      ReactDOM.render(<Menu items={menuItems(vm)} />, menuItem)
     }, 1000)
   })
 }

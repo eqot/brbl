@@ -32,13 +32,13 @@ function loadBase64ProjectInUrl(base64): ArrayBuffer {
   return buffer
 }
 
-export async function importProject(vm: any): Promise<ArrayBuffer | void> {
-  const queries = getQueries()
-  if (!queries.import) {
+export async function importProject(vm: any, url?: string): Promise<ArrayBuffer | void> {
+  const projectUrl = getQueries().import || url
+  if (!projectUrl) {
     return
   }
 
-  const response = await fetchFile(queries.import)
+  const response = await fetchFile(projectUrl)
   if (!response.ok) {
     return
   }
