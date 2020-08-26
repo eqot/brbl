@@ -1,5 +1,6 @@
 import base64js from 'base64-js'
 import scratchParser from 'scratch-parser'
+import updateBlockIds from 'scratch-vm/src/util/new-block-ids'
 
 import { getQueries, fetchFile } from './utils'
 
@@ -60,6 +61,8 @@ export async function importProject(vm: any, url?: string): Promise<ArrayBuffer 
     }
     importingBlocks.push(block)
   }
+
+  updateBlockIds(importingBlocks)
 
   for (const block of importingBlocks) {
     editingTarget.blocks.createBlock(block)

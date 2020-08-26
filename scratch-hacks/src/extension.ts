@@ -6,7 +6,7 @@ if (!window.loadedExtensions) {
 
 export async function loadExtension(vm: any, url?: string) {
   const extensionUrls = [getQueries().ext || url].flat()
-  if (!extensionUrls) {
+  if (extensionUrls.length === 0 || !extensionUrls[0]) {
     return
   }
 
