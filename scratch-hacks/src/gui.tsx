@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { Menu, MenuItemProps } from './components/menu'
+import { Menu } from './components/menu'
 
 import { loadExtension } from './extension'
 import { importProject } from './project'
-import { canvas } from './canvas'
+import { CaptureMenu } from './stage'
 
 let initialized = false
 
@@ -25,12 +25,6 @@ const menuItems = vm => {
         importProject(vm, url)
       },
     },
-    {
-      label: 'キャプチャを開始する',
-      onClick: () => {
-        canvas.toggleCapture(vm)
-      },
-    },
   ]
 }
 
@@ -48,6 +42,11 @@ export function injectMenu(vm: any) {
       menuRoot.appendChild(menuItem)
 
       ReactDOM.render(<Menu items={menuItems(vm)} />, menuItem)
+
+      const menuItem2 = document.createElement('div')
+      menuRoot.appendChild(menuItem2)
+
+      ReactDOM.render(<CaptureMenu vm={vm} />, menuItem2)
     }, 1000)
   })
 }

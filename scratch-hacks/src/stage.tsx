@@ -1,4 +1,8 @@
-class Canvas {
+import React from 'react'
+
+import { MenuItem } from './components/menuItem'
+
+class Stage {
   private capturer = null
 
   constructor() {
@@ -11,15 +15,7 @@ class Canvas {
     document.body.appendChild(script)
   }
 
-  toggleCapture(vm): void {
-    if (!this.capturer) {
-      this.startCapture(vm)
-    } else {
-      this.stopCapture(vm)
-    }
-  }
-
-  private startCapture(vm) {
+  startCapture(vm: unknown) {
     if (this.capturer) {
       return
     }
@@ -34,7 +30,7 @@ class Canvas {
     vm.renderer.on('afterDraw', this.doCapture)
   }
 
-  private stopCapture(vm) {
+  stopCapture(vm: unknown) {
     if (!this.capturer) {
       return
     }
@@ -46,10 +42,27 @@ class Canvas {
     this.capturer = null
   }
 
-  private doCapture = canvas => {
+  private doCapture = (canvas: HTMLCanvasElement) => {
     this.capturer.capture(canvas)
   }
 }
 
-const canvas = new Canvas()
-export { canvas }
+type Props = {
+  vm: object
+}
+
+const CaptureMenu: React.FC<Props> = props => {
+  const stage = new Stage()
+
+  const handleClick = (isActive: boolean) => {
+    if (isActive) {
+      stage.startCapture(props.vm)
+    } else {
+      stage.stopCapture(props.vm)
+    }
+  }
+
+  return <MenuItem label="キャプチャ開始" labelInActive="キャプチャ停止" onClick={handleClick} />
+}
+
+export { CaptureMenu }
