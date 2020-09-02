@@ -87,9 +87,9 @@
 /******/ ({
 
 /***/ "../../common/temp/node_modules/babel-loader/lib/index.js?!./node_modules/scratch-vm/src/extension-support/extension-worker.js":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** /Users/eqo/src/work/SIE/toio/scratch3/scratch3-hacks/common/temp/node_modules/babel-loader/lib??ref--4!./node_modules/scratch-vm/src/extension-support/extension-worker.js ***!
-  \**********************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** /Users/eqo/src/private/scratch3/brbl/common/temp/node_modules/babel-loader/lib??ref--4!./node_modules/scratch-vm/src/extension-support/extension-worker.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -184,11 +184,11 @@ var extensionWorker = new ExtensionWorker();
 global.Scratch.extensions = {
   register: extensionWorker.register.bind(extensionWorker)
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../common/temp/node_modules/webpack-cli/node_modules/webpack/buildin/global.js */ "../../common/temp/node_modules/webpack-cli/node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../common/temp/node_modules/webpack/buildin/global.js */ "../../common/temp/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
-/***/ "../../common/temp/node_modules/webpack-cli/node_modules/webpack/buildin/global.js":
+/***/ "../../common/temp/node_modules/webpack/buildin/global.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
   \***********************************/

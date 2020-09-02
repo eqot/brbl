@@ -87,9 +87,9 @@
 /******/ ({
 
 /***/ "../../common/temp/node_modules/babel-loader/lib/index.js?!./node_modules/scratch-storage/src/FetchWorkerTool.worker.js":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** /Users/eqo/src/work/SIE/toio/scratch3/scratch3-hacks/common/temp/node_modules/babel-loader/lib??ref--4!./node_modules/scratch-storage/src/FetchWorkerTool.worker.js ***!
-  \***************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************!*\
+  !*** /Users/eqo/src/private/scratch3/brbl/common/temp/node_modules/babel-loader/lib??ref--4!./node_modules/scratch-storage/src/FetchWorkerTool.worker.js ***!
+  \***********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
