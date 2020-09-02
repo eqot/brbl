@@ -449,6 +449,10 @@
       "projectFolder": "vendor/scratch-blocks"
     },
     {
+      "packageName": "scratch-render",
+      "projectFolder": "vendor/scratch-render"
+    },
+    {
       "packageName": "scratch-hacks",
       "projectFolder": "scratch-hacks"
     }

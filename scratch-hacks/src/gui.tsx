@@ -5,6 +5,7 @@ import { Menu, MenuItemProps } from './components/menu'
 
 import { loadExtension } from './extension'
 import { importProject } from './project'
+import { canvas } from './canvas'
 
 let initialized = false
 
@@ -15,15 +16,21 @@ const menuItems = vm => {
       onClick: () => {
         const url = prompt('拡張機能を読み込む')
         loadExtension(vm, url)
-      }
+      },
     },
     {
       label: 'プロジェクトを読み込む',
       onClick: () => {
         const url = prompt('プロジェクトを読み込む')
         importProject(vm, url)
-      }
-    }
+      },
+    },
+    {
+      label: 'キャプチャを開始する',
+      onClick: () => {
+        canvas.toggleCapture(vm)
+      },
+    },
   ]
 }
 

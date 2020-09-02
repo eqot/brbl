@@ -659,6 +659,8 @@ class RenderWebGL extends EventEmitter {
             this._snapshotCallbacks.forEach(cb => cb(snapshot));
             this._snapshotCallbacks = [];
         }
+
+        this.emit('afterDraw', gl.canvas);
     }
 
     /**

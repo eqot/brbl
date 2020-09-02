@@ -57,7 +57,7 @@ export async function importProject(vm: any, url?: string): Promise<ArrayBuffer 
   for (const key of Object.keys(blocks)) {
     const block = {
       ...blocks[key],
-      id: key
+      id: key,
     }
     importingBlocks.push(block)
   }

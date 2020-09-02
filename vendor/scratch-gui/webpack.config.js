@@ -183,6 +183,14 @@ module.exports = [
             new CopyWebpackPlugin([{
                 from: 'extension-worker.{js,js.map}',
                 context: 'node_modules/scratch-vm/dist/web'
+            }]),
+            new CopyWebpackPlugin([{
+                from: 'node_modules/ccapture.js/build',
+                to: 'static/ccapture'
+            }]),
+            new CopyWebpackPlugin([{
+                from: 'node_modules/gif.js/dist',
+                to: 'static/gif'
             }])
         ])
     })
