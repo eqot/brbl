@@ -1,7 +1,3 @@
-import React from 'react'
-
-import { MenuItem } from './components/menuItem'
-
 class Stage {
   private capturer = null
 
@@ -15,14 +11,14 @@ class Stage {
     document.body.appendChild(script)
   }
 
-  startCapture(vm: unknown) {
+  startCapture(vm: any) {
     if (this.capturer) {
       return
     }
 
     this.capturer = new CCapture({
       format: 'gif',
-      workersPath: '/static/gif/',
+      workersPath: 'static/gif/',
     })
 
     this.capturer.start()
@@ -30,7 +26,7 @@ class Stage {
     vm.renderer.on('afterDraw', this.doCapture)
   }
 
-  stopCapture(vm: unknown) {
+  stopCapture(vm: any) {
     if (!this.capturer) {
       return
     }
@@ -47,22 +43,5 @@ class Stage {
   }
 }
 
-type Props = {
-  vm: object
-}
-
-const CaptureMenu: React.FC<Props> = props => {
-  const stage = new Stage()
-
-  const handleClick = (isActive: boolean) => {
-    if (isActive) {
-      stage.startCapture(props.vm)
-    } else {
-      stage.stopCapture(props.vm)
-    }
-  }
-
-  return <MenuItem label="キャプチャ開始" labelInActive="キャプチャ停止" onClick={handleClick} />
-}
-
-export { CaptureMenu }
+const stage = new Stage()
+export { stage }
