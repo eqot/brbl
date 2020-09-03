@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 type MenuItemProps = {
-  label: string
-  labelInActive?: string
+  label: string | React.ReactNode
+  labelInActive?: string | React.ReactNode
   onClick?: (boolean) => void
   children?: React.ReactNode
 }
