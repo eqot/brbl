@@ -32,7 +32,7 @@ const detectLocale = supportedLocales => {
         return locale;
     }
 
-    const urlLocale = potentialLocales[0].toLowerCase();
+    const urlLocale = potentialLocales[0]; // .toLowerCase();
     if (supportedLocales.includes(urlLocale)) {
         return urlLocale;
     }

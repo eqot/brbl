@@ -13,6 +13,10 @@ export async function loadExtension(vm: any, url?: string) {
   const { extensionManager } = vm
 
   for (const extensionUrl of extensionUrls) {
+    if (isExtensionLoaded(extensionUrl, vm)) {
+      continue
+    }
+
     // await vm.extensionManager.loadExtensionURL(extensionUrl)
 
     // TODO: The following code should be replace with loadExtensionURL().
@@ -38,7 +42,7 @@ export async function loadExtension(vm: any, url?: string) {
       return
     }
 
-    const extensionInstance = new extension(extensionManager.runtime)
+    const extensionInstance = new extension(extensionManager.runtime, vm.getLocale())
     const serviceName = extensionManager._registerInternalExtension(extensionInstance)
     extensionManager._loadedExtensions.set(extensionUrl, serviceName)
 
@@ -46,6 +50,9 @@ export async function loadExtension(vm: any, url?: string) {
   }
 }
 
-export function isExtensionLoaded(extensionUrl: string) {
-  return window.loadedExtensions.has(extensionUrl)
+export function isExtensionLoaded(extensionUrl: string, vm: any) {
+  return (
+    window.loadedExtensions.has(extensionUrl) ||
+    (vm && vm.extensionManager && vm.extensionManager.isExtensionLoaded(extensionUrl))
+  )
 }
