@@ -1,6 +1,10 @@
 class Stage {
   private capturer = null
 
+  private framerate = 20
+  private readyToCapture = false
+  private timer
+
   constructor() {
     this.loadScript('static/ccapture/CCapture.all.min.js')
   }
@@ -19,7 +23,13 @@ class Stage {
     this.capturer = new CCapture({
       format: 'gif',
       workersPath: 'static/gif/',
+      framerate: this.framerate,
     })
+
+    this.timer = setInterval(() => {
+      this.readyToCapture = true
+    }, 1000 / this.framerate)
+    this.readyToCapture = true
 
     this.capturer.start()
 
@@ -36,10 +46,17 @@ class Stage {
     this.capturer.stop()
     this.capturer.save()
     this.capturer = null
+
+    clearInterval(this.timer)
+    this.timer = null
   }
 
   private doCapture = (canvas: HTMLCanvasElement) => {
-    this.capturer.capture(canvas)
+    if (this.readyToCapture) {
+      this.capturer.capture(canvas)
+
+      this.readyToCapture = false
+    }
   }
 }
 
