@@ -3,26 +3,27 @@ import React from 'react'
 import { MenuItem, MenuItem2ndLayer } from '../components/menuItem'
 import { loadExtension } from '../extension'
 import { importProject } from '../project'
+import { translations } from '../translations'
 
 const MENU_ITEMS = (vm: any) => [
   {
-    label: '拡張機能を読み込む',
+    label: translations.label('Load extension'),
     onClick: () => {
-      const url = prompt('拡張機能を読み込む')
+      const url = prompt(translations.label('Load extension'))
       loadExtension(vm, url)
     },
   },
   {
-    label: 'プロジェクトを読み込む',
+    label: translations.label('Load project'),
     onClick: () => {
-      const url = prompt('プロジェクトを読み込む')
+      const url = prompt(translations.label('Load project'))
       importProject(vm, url)
     },
   },
 ]
 
 const HackMenu: React.FC<{ vm: any }> = props => (
-  <MenuItem label="ハック" className="hack-menu">
+  <MenuItem label={translations.label('Hack')} className="hack-menu">
     {MENU_ITEMS(props.vm).map(item => (
       <MenuItem2ndLayer label={item.label} onClick={item.onClick} key={item.label} />
     ))}

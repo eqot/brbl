@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 
 import { HackMenu } from './containers/hackMenu'
 import { CaptureMenu } from './containers/captureMenu'
+import { translations } from './translations'
 
 export function injectMenu(vm: any) {
   vm.runtime.on('BLOCKSINFO_UPDATE', () => {
@@ -11,6 +12,8 @@ export function injectMenu(vm: any) {
 }
 
 function doInjectMenu(vm: any) {
+  translations.initialize(vm.getLocale())
+
   const element = document.querySelector('.hack-menu')
   if (element) {
     return

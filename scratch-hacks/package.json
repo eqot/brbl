@@ -13,7 +13,8 @@
     "query-string": "^6.13.1",
     "scratch-parser": "~5.0.0",
     "react": "~16.13.1",
-    "react-dom": "~16.13.1"
+    "react-dom": "~16.13.1",
+    "format-message": "~6.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",

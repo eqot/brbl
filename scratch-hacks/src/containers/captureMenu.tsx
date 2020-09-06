@@ -3,6 +3,7 @@ import React from 'react'
 import { MenuItem } from '../components/menuItem'
 import { stage } from '../stage'
 import './captureMenu.css'
+import { translations } from '../translations'
 
 const CaptureMenu: React.FC<{ vm: any }> = props => {
   const handleClick = (isActive: boolean) => {
@@ -15,8 +16,8 @@ const CaptureMenu: React.FC<{ vm: any }> = props => {
 
   return (
     <MenuItem
-      label={<span>キャプチャ</span>}
-      labelInActive={<span className="active">キャプチャ</span>}
+      label={<span>{translations.label('Capture')}</span>}
+      labelInActive={<span className="active">{translations.label('Capture')}</span>}
       onClick={handleClick}
     />
   )
