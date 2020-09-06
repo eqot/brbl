@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 type MenuItemProps = {
   label: string | React.ReactNode
   labelInActive?: string | React.ReactNode
+  className?: string
   onClick?: (boolean) => void
   children?: React.ReactNode
 }
@@ -12,7 +13,7 @@ const MenuItem: React.FC<MenuItemProps> = props => {
 
   return (
     <div
-      className="menu-bar_menu-bar-item_oLDa- menu-bar_hoverable_c6WFB"
+      className={`menu-bar_menu-bar-item_oLDa- menu-bar_hoverable_c6WFB ${props.className || ''}`}
       onClick={() => {
         if (props.onClick) {
           props.onClick(!isActive)
