@@ -2,7 +2,7 @@ class Stage {
   private capturer = null
 
   private framerate = 20
-  private readyToCapture = false
+  private requestToCapture = false
   private timer
 
   constructor() {
@@ -27,9 +27,9 @@ class Stage {
     })
 
     this.timer = setInterval(() => {
-      this.readyToCapture = true
+      this.requestToCapture = true
     }, 1000 / this.framerate)
-    this.readyToCapture = true
+    this.requestToCapture = true
 
     this.capturer.start()
 
@@ -52,10 +52,10 @@ class Stage {
   }
 
   private doCapture = (canvas: HTMLCanvasElement) => {
-    if (this.readyToCapture) {
+    if (this.requestToCapture) {
       this.capturer.capture(canvas)
 
-      this.readyToCapture = false
+      this.requestToCapture = false
     }
   }
 }
