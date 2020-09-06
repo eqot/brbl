@@ -23,7 +23,7 @@ const MenuItem: React.FC<MenuItemProps> = props => {
       }}
     >
       <div>
-        <span>{isActive ? props.labelInActive || props.label : props.label}</span>
+        <MenuItemLabel label={isActive ? props.labelInActive || props.label : props.label} />
       </div>
 
       {isActive && props.children && (
@@ -33,6 +33,10 @@ const MenuItem: React.FC<MenuItemProps> = props => {
       )}
     </div>
   )
+}
+
+const MenuItemLabel: React.FC<{ label: string | React.ReactNode }> = props => {
+  return typeof props.label === 'string' ? <span>{props.label}</span> : props.label
 }
 
 const MenuItem2ndLayer: React.FC<MenuItemProps> = props => {
