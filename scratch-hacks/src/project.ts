@@ -33,13 +33,27 @@ function loadBase64ProjectInUrl(base64): ArrayBuffer {
   return buffer
 }
 
-export async function importProject(vm: any, url?: string): Promise<ArrayBuffer | void> {
-  const projectUrl = getQueries().import || url
-  if (!projectUrl) {
+export async function importFile(vm: any, url?: string): Promise<ArrayBuffer | void> {
+  const fileUrl = getQueries().import || url
+  if (!fileUrl) {
     return
   }
 
-  const response = await fetchFile(projectUrl)
+  const fileType = fileUrl.split('.').pop()
+  switch (fileType) {
+    case 'sb3':
+      return await importSb3(vm, fileUrl)
+
+    case 'json':
+      return await importJson(vm, fileUrl)
+
+    default:
+      break
+  }
+}
+
+async function importSb3(vm: any, url: string): Promise<ArrayBuffer | void> {
+  const response = await fetchFile(url)
   if (!response.ok) {
     return
   }
@@ -82,6 +96,36 @@ function parseProject(buffer: ArrayBuffer): Promise<object> {
       resolve(project)
     })
   })
+}
+
+async function importJson(vm: any, url: string): Promise<ArrayBuffer | void> {
+  const response = await fetchFile(url)
+  if (!response.ok) {
+    return
+  }
+
+  const data = await response.json()
+
+  for (const type in data) {
+    switch (type) {
+      case 'list':
+        createLists(vm, data[type])
+        break
+
+      default:
+        break
+    }
+  }
+
+  vm.refreshWorkspace()
+}
+
+function createLists(vm: any, lists): void {
+  for (const listName in lists) {
+    const list = vm.runtime.createNewGlobalVariable(listName, null, 'list')
+    list.value = lists[listName]
+    list.isCloud = false
+  }
 }
 
 export function startProject(vm: any): void {

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { MenuItem, MenuItem2ndLayer } from '../components/menuItem'
 import { loadExtension } from '../extension'
-import { importProject } from '../project'
+import { importFile } from '../project'
 import { translations } from '../translations'
 
 const MENU_ITEMS = (vm: any) => [
@@ -17,7 +17,7 @@ const MENU_ITEMS = (vm: any) => [
     label: translations.label('Load project'),
     onClick: () => {
       const url = prompt(translations.label('Load project'))
-      importProject(vm, url)
+      importFile(vm, url)
     },
   },
 ]
