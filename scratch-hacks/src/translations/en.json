@@ -1,7 +1,8 @@
 {
-  "Hack": "Hack",
+  "Hacks": "Hacks",
   "Load extension": "Load extension",
-  "Load project": "Load project",
+  "Load file": "Load file",
+  "URL for file to be loaded": "URL for file to be loaded",
 
   "Capture": "Capture"
 }

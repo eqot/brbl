@@ -1,7 +1,8 @@
 {
-  "Hack": "ハック",
+  "Hacks": "ハック",
   "Load extension": "拡張機能を読み込む",
-  "Load project": "プロジェクトを読み込む",
+  "Load file": "ファイルを読み込む",
+  "URL for file to be loaded": "読み込むファイルへの URL",
 
   "Capture": "キャプチャ"
 }

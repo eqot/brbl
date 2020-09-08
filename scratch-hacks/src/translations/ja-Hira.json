@@ -1,7 +1,8 @@
 {
-  "Hack": "ハック",
+  "Hacks": "ハック",
   "Load extension": "かくちょうきのうをよみこむ",
-  "Load project": "プロジェクトをよみこむ",
+  "Load file": "ファイルをよみこむ",
+  "URL for file to be loaded": "よみこむファイルへの URL",
 
   "Capture": "キャプチャ"
 }

@@ -1,12 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Runtime from 'scratch-vm/src/engine/runtime'
 
-import { HackMenu } from './containers/hackMenu'
+import { HacksMenu } from './containers/hacksMenu'
 import { CaptureMenu } from './containers/captureMenu'
 import { translations } from './translations'
 
 export function injectMenu(vm: any) {
-  vm.runtime.on('BLOCKSINFO_UPDATE', () => {
+  const element = document.querySelector('.hacks-menu')
+  if (element) {
+    return
+  }
+
+  vm.runtime.on(Runtime.RUNTIME_STARTED, () => {
+    doInjectMenu(vm)
+  })
+
+  vm.runtime.on('LOCALE_CHANGED', () => {
     doInjectMenu(vm)
   })
 }
@@ -14,15 +24,10 @@ export function injectMenu(vm: any) {
 function doInjectMenu(vm: any) {
   translations.initialize(vm.getLocale())
 
-  const element = document.querySelector('.hack-menu')
-  if (element) {
-    return
-  }
-
   const menuItem = document.createElement('div')
   ReactDOM.render(
     <>
-      <HackMenu vm={vm} />
+      <HacksMenu vm={vm} />
       <CaptureMenu vm={vm} />
     </>,
     menuItem

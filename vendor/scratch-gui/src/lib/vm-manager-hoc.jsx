@@ -30,6 +30,7 @@ const vmManagerHOC = function (WrappedComponent) {
             ]);
         }
         componentDidMount () {
+            injectMenu(this.props.vm);
             loadExtension(this.props.vm);
 
             if (!this.props.vm.initialized) {
@@ -56,8 +57,6 @@ const vmManagerHOC = function (WrappedComponent) {
             if (!this.props.isPlayerOnly && !this.props.isStarted) {
                 this.props.vm.start();
             }
-
-            injectMenu(this.props.vm);
         }
         loadProject () {
             // return this.props.vm.loadProject(this.props.projectData)
