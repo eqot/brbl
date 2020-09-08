@@ -11,7 +11,7 @@ const MENU_ITEMS = (vm: any) => [
   {
     label: translations.label('Load extension'),
     onClick: () => {
-      const url = prompt(translations.label('Load extension'), DEFAULT_URL)
+      const url = prompt(translations.label('URL for extension to be loaded'), DEFAULT_URL)
       loadExtension(vm, url)
     },
   },
