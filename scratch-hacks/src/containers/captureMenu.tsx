@@ -16,9 +16,13 @@ const CaptureMenu: React.FC<{ vm: any }> = props => {
 
   return (
     <MenuItem
-      label={<span>{translations.label('Capture')}</span>}
-      labelInActive={<span className="active">{translations.label('Capture')}</span>}
-      onClick={handleClick}
+      label={<span id="capture">{translations.label('Capture')}</span>}
+      labelInActive={
+        <span id="capture" className="active">
+          {translations.label('Capture')}
+        </span>
+      }
+      // onClick={handleClick}
     />
   )
 }

@@ -25,7 +25,10 @@ const MENU_ITEMS = (vm: any) => [
 ]
 
 const HacksMenu: React.FC<{ vm: any }> = props => (
-  <MenuItem label={translations.label('Hacks')} className="hacks-menu">
+  <MenuItem
+    label={translations.label('Hacks')}
+    className="menu-bar_menu-bar-item_oLDa- menu-bar_hoverable_c6WFB hacks-menu"
+  >
     {MENU_ITEMS(props.vm).map(item => (
       <MenuItem2ndLayer label={item.label} onClick={item.onClick} key={item.label} />
     ))}
