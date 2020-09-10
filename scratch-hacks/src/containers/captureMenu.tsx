@@ -22,7 +22,7 @@ const CaptureMenu: React.FC<{ vm: any }> = props => {
           {translations.label('Capture')}
         </span>
       }
-      // onClick={handleClick}
+      onClick={handleClick}
     />
   )
 }
