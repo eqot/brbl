@@ -2,12 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Runtime from 'scratch-vm/src/engine/runtime'
 
-import { HacksMenu } from './containers/hacksMenu'
+import { LabsMenu } from './containers/labsMenu'
 import { CaptureMenu } from './containers/captureMenu'
 import { translations } from './translations'
 
 export function injectMenu(vm: any) {
-  const element = document.querySelector('.hacks-menu')
+  const element = document.querySelector('.labs-menu')
   if (element) {
     return
   }
@@ -22,7 +22,7 @@ function doInjectMenu(vm: any) {
   const menuRoot = document.querySelector('[class^=menu-bar_file-group_1]')
   const menuItem = document.createElement('div')
   menuRoot.appendChild(menuItem)
-  ReactDOM.render(<HacksMenu vm={vm} />, menuItem)
+  ReactDOM.render(<LabsMenu vm={vm} />, menuItem)
 
   const controlsRoot = document.querySelector('[class^=controls_controls-container]')
   const controlItem = document.createElement('div')

@@ -7,7 +7,7 @@ import GUI from '../containers/gui.jsx';
 import HashParserHOC from '../lib/hash-parser-hoc.jsx';
 import log from '../lib/log.js';
 
-import {isFullScreen} from 'scratch-hacks';
+import {isFullScreen} from 'scratch-labs';
 
 const onClickLogo = () => {
     window.location = 'https://scratch.mit.edu';

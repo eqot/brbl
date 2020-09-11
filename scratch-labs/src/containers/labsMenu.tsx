@@ -9,14 +9,14 @@ const DEFAULT_URL = 'https://'
 
 const MENU_ITEMS = (vm: any) => [
   {
-    label: translations.label('Load extension'),
+    label: translations.label('Load extension', { ellipsis: true }),
     onClick: () => {
       const url = prompt(translations.label('URL for extension to be loaded'), DEFAULT_URL)
       loadExtension(vm, url)
     },
   },
   {
-    label: translations.label('Load file'),
+    label: translations.label('Load file', { ellipsis: true }),
     onClick: () => {
       const url = prompt(translations.label('URL for file to be loaded'), DEFAULT_URL)
       importFile(vm, url)
@@ -24,10 +24,10 @@ const MENU_ITEMS = (vm: any) => [
   },
 ]
 
-const HacksMenu: React.FC<{ vm: any }> = props => (
+const LabsMenu: React.FC<{ vm: any }> = props => (
   <MenuItem
-    label={translations.label('Hacks')}
-    className="menu-bar_menu-bar-item_oLDa- menu-bar_hoverable_c6WFB hacks-menu"
+    label={translations.label('Labs')}
+    className="menu-bar_menu-bar-item_oLDa- menu-bar_hoverable_c6WFB labs-menu"
   >
     {MENU_ITEMS(props.vm).map(item => (
       <MenuItem2ndLayer label={item.label} onClick={item.onClick} key={item.label} />
@@ -35,4 +35,4 @@ const HacksMenu: React.FC<{ vm: any }> = props => (
   </MenuItem>
 )
 
-export { HacksMenu }
+export { LabsMenu }
