@@ -1,27 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import { MenuItem } from '../components/menuItem'
 import { stage } from '../stage'
 import './captureMenu.css'
-import { translations } from '../translations'
+
+import icon from '../../assets/images/record.svg'
 
 const CaptureMenu: React.FC<{ vm: any }> = props => {
-  const handleClick = (isActive: boolean) => {
-    if (isActive) {
+  const [isActive, setActive] = useState(false)
+
+  const handleClick = () => {
+    if (!isActive) {
       stage.startCapture(props.vm)
     } else {
       stage.stopCapture(props.vm)
     }
+
+    setActive(!isActive)
+  }
+
+  const style = {
+    padding: '5px',
   }
 
   return (
-    <MenuItem
-      label={<span id="capture">{translations.label('Capture')}</span>}
-      labelInActive={
-        <span id="capture" className="active">
-          {translations.label('Capture')}
-        </span>
-      }
+    <img
+      id="canvas-record"
+      className={isActive ? 'active' : ''}
+      src={icon}
+      width={32}
+      height={32}
+      style={style}
       onClick={handleClick}
     />
   )

@@ -1,29 +1,9 @@
-#capture {
-  display: inline-block;
-  /* padding: 0.475rem; */
-  padding: 0.4rem;
-
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  color: hsla(225, 15%, 40%, 0.75);
-
-  user-select: none;
-  cursor: pointer;
-}
-
-#capture.active {
-  /* padding: 0.575rem !important; */
-  /* margin: -0.1rem; */
-  padding: 0.45rem;
-  margin: -0.05rem;
-  border-radius: 6px;
-
-  animation: blink 1s infinite;
+#canvas-record.active {
+  animation: blink 0.5s infinite;
 }
 
 @keyframes blink {
-  0% {background-color: rgba(255, 60, 60, 1);}
-  50% {background-color: rgba(255, 60, 60, 0.1);}
-  100% {background-color: rgba(255, 60, 60, 1);}
+  0% {opacity: 100%;}
+  50% {opacity: 0%;}
+  100% {opacity: 100%;}
 }

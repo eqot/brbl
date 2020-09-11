@@ -14,7 +14,8 @@
     "scratch-parser": "~5.0.0",
     "react": "~16.13.1",
     "react-dom": "~16.13.1",
-    "format-message": "~6.2.3"
+    "format-message": "~6.2.3",
+    "url-loader": "~4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
