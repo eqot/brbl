@@ -14,7 +14,7 @@ import {
     projectError
 } from '../reducers/project-state';
 
-import {loadExtension, loadProject, importFile, startProject, injectMenu} from 'scratch-labs';
+import {loadExtension, loadProject, importFile, startProject, modifyGui} from 'scratch-labs';
 
 /*
  * Higher Order Component to manage events emitted by the VM
@@ -30,7 +30,7 @@ const vmManagerHOC = function (WrappedComponent) {
             ]);
         }
         componentDidMount () {
-            injectMenu(this.props.vm);
+            modifyGui(this.props.vm);
             loadExtension(this.props.vm);
 
             if (!this.props.vm.initialized) {

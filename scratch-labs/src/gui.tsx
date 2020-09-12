@@ -6,7 +6,21 @@ import { LabsMenu } from './containers/labsMenu'
 import { CaptureMenu } from './containers/captureMenu'
 import { translations } from './translations'
 
-export function injectMenu(vm: any) {
+import logo from '../assets/images/scratch-labs.svg'
+
+export function modifyGui(vm: any) {
+  replaceLogo()
+  injectMenu(vm)
+}
+
+function replaceLogo() {
+  const originalLogo = document.querySelector('img[alt="Scratch"]') as HTMLImageElement
+  originalLogo.src = logo
+}
+
+export function onClickLogoForLabs() {}
+
+function injectMenu(vm: any) {
   const element = document.querySelector('.labs-menu')
   if (element) {
     return
