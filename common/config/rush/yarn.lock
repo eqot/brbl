@@ -1232,7 +1232,7 @@
 
 "@rush-temp/scratch-render@file:./projects/scratch-render.tgz":
   version "0.0.0"
-  resolved "file:./projects/scratch-render.tgz#34c3507f5eecc17e0299674df9305c3fdb05c3f1"
+  resolved "file:./projects/scratch-render.tgz#4b1b919dba1a898ddc849bff378255118aaa4f2d"
   dependencies:
     babel-core "^6.23.1"
     babel-eslint "^8.2.1"
@@ -1255,6 +1255,7 @@
     raw-loader "^0.5.1"
     scratch-storage "^1.0.0"
     scratch-svg-renderer "0.2.0-prerelease.20200610220938"
+    scratch-vm "0.2.0-prerelease.20200622143012"
     tap "^11.0.0"
     travis-after-all "^1.4.4"
     twgl.js "4.4.0"
@@ -11104,6 +11105,30 @@ scratch-translate-extension-languages@0.0.20191118205314:
   version "0.0.20191118205314"
   resolved "https://registry.yarnpkg.com/scratch-translate-extension-languages/-/scratch-translate-extension-languages-0.0.20191118205314.tgz#9f781cc0c89785faba8ae86775a4915225676284"
   integrity sha512-r0lvpgQjPMjbhI2wROrgoXzBhCvWJdkbAqJMfl2CdNqrwBpUXqLvNNtI3VtNLPJAcp9VfxEylkU9lVZ0gvU46Q==
+
+scratch-vm@0.2.0-prerelease.20200622143012:
+  version "0.2.0-prerelease.20200622143012"
+  resolved "https://registry.yarnpkg.com/scratch-vm/-/scratch-vm-0.2.0-prerelease.20200622143012.tgz#4411bf3c29a43f3465b9730d4e2af83f9d2af63a"
+  integrity sha512-2SHhyOgdMGJnTCAKWdFSxCVrtRww+1UJFZfDV6ulsbtlS+2k4JqZMCveYzmcfReRFs0ghYFCl0E7p/TTWLWtgg==
+  dependencies:
+    "@vernier/godirect" "1.5.0"
+    arraybuffer-loader "^1.0.6"
+    atob "2.1.2"
+    btoa "1.2.1"
+    canvas-toBlob "1.0.0"
+    decode-html "2.0.0"
+    diff-match-patch "1.0.4"
+    format-message "6.2.1"
+    htmlparser2 "3.10.0"
+    immutable "3.8.1"
+    jszip "^3.1.5"
+    minilog "3.1.0"
+    nets "3.2.0"
+    scratch-parser "5.0.0"
+    scratch-sb1-converter "0.2.7"
+    scratch-translate-extension-languages "0.0.20191118205314"
+    text-encoding "0.7.0"
+    worker-loader "^1.1.1"
 
 script-loader@0.7.2:
   version "0.7.2"
