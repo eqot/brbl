@@ -1082,7 +1082,7 @@
 
 "@rush-temp/scratch-blocks@file:./projects/scratch-blocks.tgz":
   version "0.0.0"
-  resolved "file:./projects/scratch-blocks.tgz#65dafcfabe8401ca3ad6dc532626095099546d40"
+  resolved "file:./projects/scratch-blocks.tgz#9d17cfd6b5dfa70f08cd3b98e89679c0423233fd"
   dependencies:
     async "2.6.0"
     chromedriver "^81.0.0"
@@ -1093,7 +1093,7 @@
     gh-pages "0.12.0"
     glob "7.1.2"
     google-closure-compiler "20180402.0.0"
-    google-closure-library "20180204.0.0"
+    google-closure-library "20190301.0.0"
     graceful-fs "4.1.11"
     imports-loader "0.6.5"
     json "9.0.4"
@@ -1108,7 +1108,7 @@
 
 "@rush-temp/scratch-gui@file:./projects/scratch-gui.tgz":
   version "0.0.0"
-  resolved "file:./projects/scratch-gui.tgz#8e5ab28aebd4569d219b0ae61651c1d47c1b2207"
+  resolved "file:./projects/scratch-gui.tgz#0d8599ae52dc99b0b2e5b4a334e63c83488a336a"
   dependencies:
     "@babel/cli" "^7.1.2"
     "@babel/core" "^7.1.2"
@@ -1125,7 +1125,7 @@
     base64-loader "1.0.0"
     bowser "1.9.4"
     ccapture.js "~1.1.0"
-    chromedriver "83.0.0"
+    chromedriver "84.0.1"
     classnames "2.2.6"
     computed-style-to-inline-style "3.0.0"
     copy-webpack-plugin "^4.5.1"
@@ -1155,9 +1155,7 @@
     lodash.bindall "4.4.0"
     lodash.debounce "4.0.8"
     lodash.defaultsdeep "4.6.0"
-    lodash.isequal "4.5.0"
     lodash.omit "4.5.0"
-    lodash.pick "4.4.0"
     lodash.throttle "4.0.1"
     minilog "3.1.0"
     mkdirp "^1.0.3"
@@ -1190,14 +1188,13 @@
     redux-throttle "0.1.1"
     rimraf "^2.6.1"
     scratch-audio "0.1.0-prerelease.20200528195344"
-    scratch-l10n "3.10.20200722030735"
-    scratch-paint "0.2.0-prerelease.20200721201211"
+    scratch-l10n "3.10.20200909030847"
+    scratch-paint "0.2.0-prerelease.20200831213104"
     scratch-storage "1.3.3"
     scratch-svg-renderer "0.2.0-prerelease.20200610220938"
     selenium-webdriver "3.6.0"
     startaudiocontext "1.2.1"
     style-loader "^0.23.0"
-    svg-to-image "1.1.3"
     text-encoding "0.7.0"
     to-style "1.3.3"
     uglifyjs-webpack-plugin "^1.2.5"
@@ -1235,7 +1232,7 @@
 
 "@rush-temp/scratch-render@file:./projects/scratch-render.tgz":
   version "0.0.0"
-  resolved "file:./projects/scratch-render.tgz#4b1b919dba1a898ddc849bff378255118aaa4f2d"
+  resolved "file:./projects/scratch-render.tgz#34c3507f5eecc17e0299674df9305c3fdb05c3f1"
   dependencies:
     babel-core "^6.23.1"
     babel-eslint "^8.2.1"
@@ -1258,7 +1255,6 @@
     raw-loader "^0.5.1"
     scratch-storage "^1.0.0"
     scratch-svg-renderer "0.2.0-prerelease.20200610220938"
-    scratch-vm "0.2.0-prerelease.20200622143012"
     tap "^11.0.0"
     travis-after-all "^1.4.4"
     twgl.js "4.4.0"
@@ -1321,10 +1317,10 @@
     webpack-dev-server "^3.1.5"
     worker-loader "^1.1.1"
 
-"@scratch/paper@0.11.20200709220949":
-  version "0.11.20200709220949"
-  resolved "https://registry.yarnpkg.com/@scratch/paper/-/paper-0.11.20200709220949.tgz#fdd5e2d33d619a0cb488a0136200211453c8dd27"
-  integrity sha512-KBz51YqXxw1A5ogtywCN0SI27ROevvQRpU+Tau6cqgMXi0Wc8twfSPV/8gw6jbKrV6cS+9MU1WR2F/oTB8dh8g==
+"@scratch/paper@0.11.20200728195508":
+  version "0.11.20200728195508"
+  resolved "https://registry.yarnpkg.com/@scratch/paper/-/paper-0.11.20200728195508.tgz#6d73a10eb9e846b8fc9961c013e0bcd5d4467303"
+  integrity sha512-cphYw/y/l36UJ8fv/LXyK+lHlxMXtoydJUsgA4u5QnaUaSZYepuSHik6PewJGT4qvaPwT5ImvHWwX2kElWXvoQ==
 
 "@testim/chrome-version@^1.0.7":
   version "1.0.7"
@@ -1408,9 +1404,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*":
-  version "14.10.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.10.0.tgz#15815dff82c8dc30827f6b1286f865902945095a"
-  integrity sha512-SOIyrdADB4cq6eY1F+9iU48iIomFAPltu11LCvA9PKcyEwHadjCFzNVPotAR+oEJA0bCP4Xvvgy+vwu1ZjVh8g==
+  version "14.10.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.10.1.tgz#cc323bad8e8a533d4822f45ce4e5326f36e42177"
+  integrity sha512-aYNbO+FZ/3KGeQCEkNhHFRIzBOUgc7QvcVNKXbfnhDkSfwUv91JsQQa10rDgKSTSLkXZ1UIyPe4FJJNVgw1xWQ==
 
 "@types/prop-types@*":
   version "15.7.3"
@@ -3288,9 +3284,9 @@ camelcase@^6.0.0:
   integrity sha512-8KMDF1Vz2gzOq54ONPJS65IvTUaB1cHJ2DMM7MbPmLZljDH1qpzzLsWdiN9pHh6qvkRVDTi/07+eNGch/oLU4w==
 
 caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001125:
-  version "1.0.30001125"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001125.tgz#2a1a51ee045a0a2207474b086f628c34725e997b"
-  integrity sha512-9f+r7BW8Qli917mU3j0fUaTweT3f3vnX/Lcs+1C73V+RADmFme+Ih0Br8vONQi3X0lseOe6ZHfsZLCA8MSjxUA==
+  version "1.0.30001128"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001128.tgz#00ea73610bc991a92250e958837c197734be7029"
+  integrity sha512-ocjGtRj+4wP6XTEIn2AGn3ebd8nkFN3991GlZ3ubLrjUC/w/YGgBFb5iy7CHr5NaBZ/pfo0SrctGRDVUbGgpzg==
 
 canvas-toBlob@1.0.0:
   version "1.0.0"
@@ -3414,15 +3410,16 @@ chrome-trace-event@^1.0.2:
   dependencies:
     tslib "^1.9.0"
 
-chromedriver@83.0.0:
-  version "83.0.0"
-  resolved "https://registry.yarnpkg.com/chromedriver/-/chromedriver-83.0.0.tgz#75d7d838e58014658c3990089464166fef951926"
-  integrity sha512-AePp9ykma+z4aKPRqlbzvVlc22VsQ6+rgF+0aL3B5onHOncK18dWSkLrSSJMczP/mXILN9ohGsvpuTwoRSj6OQ==
+chromedriver@84.0.1:
+  version "84.0.1"
+  resolved "https://registry.yarnpkg.com/chromedriver/-/chromedriver-84.0.1.tgz#eaca7723f1a58c262a5c521b8596769af40b0d4f"
+  integrity sha512-iJ6Y680yp58+KlAPS5YgYe3oePVFf8jY5k4YoczhXkT0p/mQZKfGNkGG/Xc0LjGWDQRTgZwXg66hOXoApIQecg==
   dependencies:
     "@testim/chrome-version" "^1.0.7"
     axios "^0.19.2"
     del "^5.1.0"
-    extract-zip "^2.0.0"
+    extract-zip "^2.0.1"
+    https-proxy-agent "^5.0.0"
     mkdirp "^1.0.4"
     tcp-port-used "^1.0.1"
 
@@ -4486,9 +4483,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.47, electron-to-chromium@^1.3.564:
-  version "1.3.565"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.565.tgz#8511797ab2b66b767e1aef4eb17d636bf01a2c72"
-  integrity sha512-me5dGlHFd8Q7mKhqbWRLIYnKjw4i0fO6hmW0JBxa7tM87fBfNEjWokRnDF7V+Qme/9IYpwhfMn+soWs40tXWqg==
+  version "1.3.567"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.567.tgz#7a404288952ac990e447a7a86470d460ea953b8f"
+  integrity sha512-1aKkw0Hha1Bw9JA5K5PT5eFXC/TXbkJvUfNSNEciPUMgSIsRJZM1hF2GUEAGZpAbgvd8En21EA+Lv820KOhvqA==
 
 elliptic@^6.5.3:
   version "6.5.3"
@@ -6274,10 +6271,10 @@ google-closure-compiler@20180402.0.0:
     vinyl "^2.0.1"
     vinyl-sourcemaps-apply "^0.2.0"
 
-google-closure-library@20180204.0.0:
-  version "20180204.0.0"
-  resolved "https://registry.yarnpkg.com/google-closure-library/-/google-closure-library-20180204.0.0.tgz#ad3c5a18dfd731c6149c5220d2991c0c9129718a"
-  integrity sha1-rTxaGN/XMcYUnFIg0pkcDJEpcYo=
+google-closure-library@20190301.0.0:
+  version "20190301.0.0"
+  resolved "https://registry.yarnpkg.com/google-closure-library/-/google-closure-library-20190301.0.0.tgz#1d0f584ad207dc3869af44668e7fbf04d10acdee"
+  integrity sha512-mpeszbnXpRhXZ0sPqUxBgUmk0RtmzrJRy3KFygp0Ih9JuRUjQTCLhwYQeIlK2vB2lShhY/KUo9E1Z1gvxDFxOQ==
 
 graceful-fs@4.1.10:
   version "4.1.10"
@@ -6369,7 +6366,7 @@ has-flag@^3.0.0:
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
   integrity sha1-tdRU3CGZriJWmfNGfloH87lVuv0=
 
-has-symbols@^1.0.0, has-symbols@^1.0.1:
+has-symbols@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/has-symbols/-/has-symbols-1.0.1.tgz#9f5214758a44196c406d9bd76cebf81ec2dd31e8"
   integrity sha512-PLcsoqu++dmEIZB+6totNFKq/7Do+Z0u4oT0zKOJNl3lYK6vGwwu2hjHs+68OEZbTjiUE9bgOABXbP/GvrS0Kg==
@@ -8144,11 +8141,6 @@ linkify-it@^2.0.0:
   dependencies:
     uc.micro "^1.0.1"
 
-load-img@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/load-img/-/load-img-1.0.0.tgz#09537449893c32a8709074645566c4c5faa9ac26"
-  integrity sha1-CVN0SYk8MqhwkHRkVWbExfqprCY=
-
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -8276,7 +8268,7 @@ lodash.flattendeep@^4.4.0:
   resolved "https://registry.yarnpkg.com/lodash.flattendeep/-/lodash.flattendeep-4.4.0.tgz#fb030917f86a3134e5bc9bec0d69e0013ddfedb2"
   integrity sha1-+wMJF/hqMTTlvJvsDWngAT3f7bI=
 
-lodash.isequal@4.5.0, lodash.isequal@^4.5.0:
+lodash.isequal@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
   integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
@@ -8290,11 +8282,6 @@ lodash.omit@4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.omit/-/lodash.omit-4.5.0.tgz#6eb19ae5a1ee1dd9df0b969e66ce0b7fa30b5e60"
   integrity sha1-brGa5aHuHdnfC5aeZs4Lf6MLXmA=
-
-lodash.pick@4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
-  integrity sha1-UvBWEP/53tQiYRRB7R/BI6AwAbM=
 
 lodash.throttle@4.0.1:
   version "4.0.1"
@@ -9141,7 +9128,7 @@ object-is@^1.0.1, object-is@^1.0.2, object-is@^1.1.2:
     define-properties "^1.1.3"
     es-abstract "^1.17.5"
 
-object-keys@^1.0.11, object-keys@^1.0.12, object-keys@^1.0.6, object-keys@^1.1.1:
+object-keys@^1.0.12, object-keys@^1.0.6, object-keys@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.1.tgz#1c47f272df277f3b1daf061677d9c82e2322c60e"
   integrity sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==
@@ -9154,14 +9141,14 @@ object-visit@^1.0.0:
     isobject "^3.0.0"
 
 object.assign@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/object.assign/-/object.assign-4.1.0.tgz#968bf1100d7956bb3ca086f006f846b3bc4008da"
-  integrity sha512-exHJeq6kBKj58mqGyTQ9DFvrZC/eR6OwxzoM9YRoGBqrXYonaFyGiFMuc9VZrXf7DarreEwMpurG3dd+CNyW5w==
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/object.assign/-/object.assign-4.1.1.tgz#303867a666cdd41936ecdedfb1f8f3e32a478cdd"
+  integrity sha512-VT/cxmx5yaoHSOTSyrCygIDFco+RsibY2NM0a4RdEeY/4KgqezwFtK1yr3U67xYhqJSlASm2pKhLVzPj2lr4bA==
   dependencies:
-    define-properties "^1.1.2"
-    function-bind "^1.1.1"
-    has-symbols "^1.0.0"
-    object-keys "^1.0.11"
+    define-properties "^1.1.3"
+    es-abstract "^1.18.0-next.0"
+    has-symbols "^1.0.1"
+    object-keys "^1.1.1"
 
 object.entries@^1.1.1, object.entries@^1.1.2:
   version "1.1.2"
@@ -11039,17 +11026,7 @@ scratch-audio@0.1.0-prerelease.20200528195344, scratch-audio@latest:
     minilog "^3.0.1"
     startaudiocontext "1.2.1"
 
-scratch-l10n@3.10.20200722030735:
-  version "3.10.20200722030735"
-  resolved "https://registry.yarnpkg.com/scratch-l10n/-/scratch-l10n-3.10.20200722030735.tgz#f0be8c2a0c894fbe6c11421b742ae790df949bd8"
-  integrity sha512-cjGHaJ5pT7QKxnYg/ItsVL2YU9M1X+Xj2um+qoIkX7nMCI6JWfZ6jXNE4zeSzwD7vGOOF//9ZIMYhxXhlCdljQ==
-  dependencies:
-    "@babel/cli" "^7.1.2"
-    "@babel/core" "^7.1.2"
-    babel-plugin-react-intl "^3.0.1"
-    transifex "1.6.6"
-
-scratch-l10n@^3.1.20181129221712, scratch-l10n@^3.10.20200617135753:
+scratch-l10n@3.10.20200909030847, scratch-l10n@^3.1.20181129221712, scratch-l10n@^3.10.20200617135753:
   version "3.10.20200909030847"
   resolved "https://registry.yarnpkg.com/scratch-l10n/-/scratch-l10n-3.10.20200909030847.tgz#bc09ba2238a35601953ec55641807ff406467d7a"
   integrity sha512-e76/1VX3Fa30doaznY9nN8B7NSoxROpYTHZOiuJigwv0M4sgFaoCoJHYA5jhxQWKMHIl48BpS8q0rEeUpFcDZQ==
@@ -11059,12 +11036,12 @@ scratch-l10n@^3.1.20181129221712, scratch-l10n@^3.10.20200617135753:
     babel-plugin-react-intl "^3.0.1"
     transifex "1.6.6"
 
-scratch-paint@0.2.0-prerelease.20200721201211:
-  version "0.2.0-prerelease.20200721201211"
-  resolved "https://registry.yarnpkg.com/scratch-paint/-/scratch-paint-0.2.0-prerelease.20200721201211.tgz#9a8543965d5f840f6d90163ec47adfda11573bc0"
-  integrity sha512-7DXqALQFM2ZmAPhqTxwSwHqBQYE89XItKW4GECqpJk4ojEtP15Audu+KBA0UakdPvc9mBzHUygyLDIIaVd2Zvg==
+scratch-paint@0.2.0-prerelease.20200831213104:
+  version "0.2.0-prerelease.20200831213104"
+  resolved "https://registry.yarnpkg.com/scratch-paint/-/scratch-paint-0.2.0-prerelease.20200831213104.tgz#1eff85f6a8f649554d34f759f0be178c3894f961"
+  integrity sha512-SIZ6+POlAd5M3WtVHWJ+s8fpLTan/JXx9LmBvWZqaASknyWQyJxOPPEU7DNnpWNqJ/NfaWxgoAw48lQmKupa+g==
   dependencies:
-    "@scratch/paper" "0.11.20200709220949"
+    "@scratch/paper" "0.11.20200728195508"
     classnames "2.2.5"
     keymirror "0.1.1"
     lodash.bindall "4.4.0"
@@ -11127,30 +11104,6 @@ scratch-translate-extension-languages@0.0.20191118205314:
   version "0.0.20191118205314"
   resolved "https://registry.yarnpkg.com/scratch-translate-extension-languages/-/scratch-translate-extension-languages-0.0.20191118205314.tgz#9f781cc0c89785faba8ae86775a4915225676284"
   integrity sha512-r0lvpgQjPMjbhI2wROrgoXzBhCvWJdkbAqJMfl2CdNqrwBpUXqLvNNtI3VtNLPJAcp9VfxEylkU9lVZ0gvU46Q==
-
-scratch-vm@0.2.0-prerelease.20200622143012:
-  version "0.2.0-prerelease.20200622143012"
-  resolved "https://registry.yarnpkg.com/scratch-vm/-/scratch-vm-0.2.0-prerelease.20200622143012.tgz#4411bf3c29a43f3465b9730d4e2af83f9d2af63a"
-  integrity sha512-2SHhyOgdMGJnTCAKWdFSxCVrtRww+1UJFZfDV6ulsbtlS+2k4JqZMCveYzmcfReRFs0ghYFCl0E7p/TTWLWtgg==
-  dependencies:
-    "@vernier/godirect" "1.5.0"
-    arraybuffer-loader "^1.0.6"
-    atob "2.1.2"
-    btoa "1.2.1"
-    canvas-toBlob "1.0.0"
-    decode-html "2.0.0"
-    diff-match-patch "1.0.4"
-    format-message "6.2.1"
-    htmlparser2 "3.10.0"
-    immutable "3.8.1"
-    jszip "^3.1.5"
-    minilog "3.1.0"
-    nets "3.2.0"
-    scratch-parser "5.0.0"
-    scratch-sb1-converter "0.2.7"
-    scratch-translate-extension-languages "0.0.20191118205314"
-    text-encoding "0.7.0"
-    worker-loader "^1.1.1"
 
 script-loader@0.7.2:
   version "0.7.2"
@@ -11969,13 +11922,6 @@ supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
-svg-to-image@1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/svg-to-image/-/svg-to-image-1.1.3.tgz#d6ff4d883ca8f7e3f792b42b2328b15cbe2fb0f3"
-  integrity sha1-1v9NiDyo9+P3krQrIyixXL4vsPM=
-  dependencies:
-    load-img "^1.0.0"
-
 symbol-observable@^1.0.3:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
@@ -12492,9 +12438,9 @@ typescript@^3.3.3:
   integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
 
 ua-parser-js@^0.7.18:
-  version "0.7.21"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.21.tgz#853cf9ce93f642f67174273cc34565ae6f308777"
-  integrity sha512-+O8/qh/Qj8CgC6eYBVBykMrNtp5Gebn4dlGD/kKXVkJNDwyrAwSIqwz8CDf+tsAIWVycKcku6gIXJ0qwx/ZXaQ==
+  version "0.7.22"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.22.tgz#960df60a5f911ea8f1c818f3747b99c6e177eae3"
+  integrity sha512-YUxzMjJ5T71w6a8WWVcMGM6YWOTX27rCoIQgLXiWaxqXSx9D7DNjiGWn1aJIRSQ5qr0xuhra77bSIh6voR/46Q==
 
 uc.micro@^1.0.1, uc.micro@^1.0.5:
   version "1.0.6"
