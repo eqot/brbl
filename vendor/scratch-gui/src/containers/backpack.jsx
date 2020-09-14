@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import bindAll from 'lodash.bindall';
 import BackpackComponent from '../components/backpack/backpack.jsx';
 import {
-    getBackpackContents,
-    saveBackpackObject,
-    deleteBackpackObject,
+    // getBackpackContents,
+    // saveBackpackObject,
+    // deleteBackpackObject,
     soundPayload,
     costumePayload,
     spritePayload,
@@ -17,6 +17,8 @@ import DropAreaHOC from '../lib/drop-area-hoc.jsx';
 import {connect} from 'react-redux';
 import storage from '../lib/storage';
 import VM from 'scratch-vm';
+
+import {isEnabled, getBackpackContents, saveBackpackObject, deleteBackpackObject} from 'scratch-labs';
 
 const dragTypes = [DragConstants.COSTUME, DragConstants.SOUND, DragConstants.SPRITE];
 const DroppableBackpack = DropAreaHOC(dragTypes)(BackpackComponent);
@@ -157,7 +159,7 @@ class Backpack extends React.Component {
         });
     }
     getContents () {
-        if (this.props.token && this.props.username) {
+        if (isEnabled() || (this.props.token && this.props.username)) {
             this.setState({loading: true, error: false}, () => {
                 getBackpackContents({
                     host: this.props.host,
@@ -229,7 +231,7 @@ class Backpack extends React.Component {
                 onMore={this.handleMore}
                 onMouseEnter={this.handleMouseEnter}
                 onMouseLeave={this.handleMouseLeave}
-                onToggle={this.props.host ? this.handleToggle : null}
+                onToggle={isEnabled() || this.props.host ? this.handleToggle : null}
             />
         );
     }
