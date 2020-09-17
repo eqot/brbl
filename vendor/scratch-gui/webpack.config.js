@@ -185,11 +185,7 @@ module.exports = [
                 context: 'node_modules/scratch-vm/dist/web'
             }]),
             new CopyWebpackPlugin([{
-                from: 'node_modules/ccapture.js/build',
-                to: 'static/ccapture'
-            }]),
-            new CopyWebpackPlugin([{
-                from: 'node_modules/gif.js/dist',
+                from: 'node_modules/canvas-record/node_modules/gif.js/dist',
                 to: 'static/gif'
             }])
         ])

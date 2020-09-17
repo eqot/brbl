@@ -455,6 +455,10 @@
     {
       "packageName": "scratch-labs",
       "projectFolder": "scratch-labs"
+    },
+    {
+      "packageName": "canvas-record",
+      "projectFolder": "canvas-record"
     }
   ]
 }
