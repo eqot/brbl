@@ -15,6 +15,7 @@ import {
 } from '../reducers/project-state';
 
 import {loadExtension, loadProject, importFile, startProject, modifyGui} from 'scratch-labs';
+import blockToImage from './backpack/block-to-image';
 
 /*
  * Higher Order Component to manage events emitted by the VM
@@ -30,7 +31,7 @@ const vmManagerHOC = function (WrappedComponent) {
             ]);
         }
         componentDidMount () {
-            modifyGui(this.props.vm);
+            modifyGui(this.props.vm, {blockToImage});
             loadExtension(this.props.vm);
 
             if (!this.props.vm.initialized) {

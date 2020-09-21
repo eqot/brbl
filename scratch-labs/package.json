@@ -16,7 +16,8 @@
     "react": "~16.13.1",
     "react-dom": "~16.13.1",
     "format-message": "~6.2.3",
-    "url-loader": "~4.1.0"
+    "url-loader": "~4.1.0",
+    "downloadjs": "~1.4.7"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",

@@ -1123,7 +1123,7 @@
 
 "@rush-temp/scratch-gui@file:./projects/scratch-gui.tgz":
   version "0.0.0"
-  resolved "file:./projects/scratch-gui.tgz#e658e7f3806eca431e4982164ff2779db3f52a4b"
+  resolved "file:./projects/scratch-gui.tgz#11f0fa4e7bc25c78a5ba9a1d3ba80da518c0d921"
   dependencies:
     "@babel/cli" "^7.1.2"
     "@babel/core" "^7.1.2"
@@ -1201,7 +1201,7 @@
     redux-throttle "0.1.1"
     rimraf "^2.6.1"
     scratch-audio "0.1.0-prerelease.20200528195344"
-    scratch-l10n "3.10.20200909030847"
+    scratch-l10n "3.10.20200916030802"
     scratch-paint "0.2.0-prerelease.20200831213104"
     scratch-storage "1.3.3"
     scratch-svg-renderer "0.2.0-prerelease.20200610220938"
@@ -1220,7 +1220,7 @@
 
 "@rush-temp/scratch-labs@file:./projects/scratch-labs.tgz":
   version "0.0.0"
-  resolved "file:./projects/scratch-labs.tgz#ff4034d76ebb96c982b3bc90bb97257c62a86029"
+  resolved "file:./projects/scratch-labs.tgz#c1845efebdadba0414f712e486d9eb73baa80b5c"
   dependencies:
     "@babel/core" "^7.10.5"
     "@babel/plugin-proposal-class-properties" "^7.10.4"
@@ -1233,6 +1233,7 @@
     babel-loader "^8.1.0"
     base64-js "^1.3.1"
     css-loader "~4.2.2"
+    downloadjs "~1.4.7"
     format-message "~6.2.3"
     query-string "^6.13.1"
     react "~16.13.1"
@@ -1418,9 +1419,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*":
-  version "14.10.3"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.10.3.tgz#5ae1f119c96643fc9b19b2d1a83bfa2ec3dbb7ea"
-  integrity sha512-zdN0hor7TLkjAdKTnYW+Y22oIhUUpil5ZD1V1OFq0CR0CLKw+NdR6dkziTfkWRLo6sKzisayoj/GNpNbe4LY9Q==
+  version "14.11.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.11.1.tgz#56af902ad157e763f9ba63d671c39cda3193c835"
+  integrity sha512-oTQgnd0hblfLsJ6BvJzzSL+Inogp3lq9fGgqRkMB/ziKMgEUaFl801OncOzUmalfzt14N0oPHMK47ipl+wbTIw==
 
 "@types/prop-types@*":
   version "15.7.3"
@@ -3298,9 +3299,9 @@ camelcase@^6.0.0:
   integrity sha512-8KMDF1Vz2gzOq54ONPJS65IvTUaB1cHJ2DMM7MbPmLZljDH1qpzzLsWdiN9pHh6qvkRVDTi/07+eNGch/oLU4w==
 
 caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001131:
-  version "1.0.30001131"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001131.tgz#afad8a28fc2b7a0d3ae9407e71085a0ead905d54"
-  integrity sha512-4QYi6Mal4MMfQMSqGIRPGbKIbZygeN83QsWq1ixpUwvtfgAZot5BrCKzGygvZaV+CnELdTwD0S4cqUNozq7/Cw==
+  version "1.0.30001133"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001133.tgz#ec564c5495311299eb05245e252d589a84acd95e"
+  integrity sha512-s3XAUFaC/ntDb1O3lcw9K8MPeOW7KO3z9+GzAoBxfz1B0VdacXPMKgFUtG4KIsgmnbexmi013s9miVu4h+qMHw==
 
 canvas-toBlob@1.0.0:
   version "1.0.0"
@@ -4108,11 +4109,11 @@ debug@3.1.0, debug@=3.1.0:
     ms "2.0.0"
 
 debug@4, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
-  integrity sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw==
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.2.0.tgz#7f150f93920e94c58f5574c2fd01a3110effe7f1"
+  integrity sha512-IX2ncY78vDTjZMFUdmsvIRFY2Cf4FnD0wRs+nQwJU8Lu99/tPFdb0VybiiMTPe3I6rQmwsqQqRBvxU+bZ/I8sg==
   dependencies:
-    ms "^2.1.1"
+    ms "2.1.2"
 
 debug@4.1.0:
   version "4.1.0"
@@ -7856,9 +7857,9 @@ jsbn@~0.1.0:
   integrity sha1-peZUwuWi3rXyAdls77yoDA7y9RM=
 
 jsdoc@^3.5.5, jsdoc@^3.6.0:
-  version "3.6.5"
-  resolved "https://registry.yarnpkg.com/jsdoc/-/jsdoc-3.6.5.tgz#e004372ca6f2dcdf19b3d2ebcd7c725528485502"
-  integrity sha512-SbY+i9ONuxSK35cgVHaI8O9senTE4CDYAmGSDJ5l3+sfe62Ff4gy96osy6OW84t4K4A8iGnMrlRrsSItSNp3RQ==
+  version "3.6.6"
+  resolved "https://registry.yarnpkg.com/jsdoc/-/jsdoc-3.6.6.tgz#9fe162bbdb13ee7988bf74352b5147565bcfd8e1"
+  integrity sha512-znR99e1BHeyEkSvgDDpX0sTiTu+8aQyDl9DawrkOGZTTW8hv0deIFXx87114zJ7gRaDZKVQD/4tr1ifmJp9xhQ==
   dependencies:
     "@babel/parser" "^7.9.4"
     bluebird "^3.7.2"
@@ -8794,7 +8795,7 @@ ms@2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
   integrity sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
 
-ms@^2.1.1:
+ms@2.1.2, ms@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
@@ -8857,9 +8858,9 @@ natural-compare@^1.4.0:
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
 nearley@^2.7.10:
-  version "2.19.6"
-  resolved "https://registry.yarnpkg.com/nearley/-/nearley-2.19.6.tgz#22663fd7326eb708b4c18bfdd7e4ce204b7239b0"
-  integrity sha512-OV3Lx+o5iIGWVY38zs+7aiSnBqaHTFAOQiz83VHJje/wOOaSgzE3H0S/xfISxJhFSoPcX611OEDV9sCT8F283g==
+  version "2.19.7"
+  resolved "https://registry.yarnpkg.com/nearley/-/nearley-2.19.7.tgz#eafbe3e2d8ccfe70adaa5c026ab1f9709c116218"
+  integrity sha512-Y+KNwhBPcSJKeyQCFjn8B/MIe+DDlhaaDgjVldhy5xtFewIbiQgcbZV8k2gCVwkI1ZsKCnjIYZbR+0Fim5QYgg==
   dependencies:
     commander "^2.19.0"
     moo "^0.5.0"
@@ -9678,9 +9679,9 @@ pkg-dir@^3.0.0:
     find-up "^3.0.0"
 
 playwright-chromium@^1.0.1:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/playwright-chromium/-/playwright-chromium-1.4.0.tgz#bcf5ed6bb089fce16af55cfe2ae7f188f2c09797"
-  integrity sha512-e6BvNpo/Xb38W6+LhVmozd304dZxDdm4CThzJOeAXTneSTZWvPK7LkfUGEc3zdqZZlAhgvft1rY3jr4shQN6wg==
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/playwright-chromium/-/playwright-chromium-1.4.1.tgz#aa0a7632ee7701b4df43fea9d1c61e7dd6ca5acd"
+  integrity sha512-n14nh1/fj/zaJ5BrDH9+PL8oWW/IOjHsua/3LzDK3FeZLgB+dSsgQebvZk7NQirz+zeBFfVAXK5ByV9YJg99FA==
   dependencies:
     debug "^4.1.1"
     extract-zip "^2.0.1"
@@ -9738,9 +9739,9 @@ postcss-import@^12.0.0:
     resolve "^1.1.7"
 
 postcss-load-config@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-load-config/-/postcss-load-config-2.1.0.tgz#c84d692b7bb7b41ddced94ee62e8ab31b417b003"
-  integrity sha512-4pV3JJVPLd5+RueiVVB+gFOAa7GWc25XQcMp86Zexzke69mKf6Nx9LRcQywdz7yZI9n1udOxmLuAwTBypypF8Q==
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/postcss-load-config/-/postcss-load-config-2.1.1.tgz#0a684bb8beb05e55baf922f7ab44c3edb17cf78e"
+  integrity sha512-D2ENobdoZsW0+BHy4x1CAkXtbXtYWYRIxL/JbtRBqrRGOPtJ2zoga/bEZWhV/ShWB5saVxJMzbMdSyA/vv4tXw==
   dependencies:
     cosmiconfig "^5.0.0"
     import-cwd "^2.0.0"
@@ -9820,13 +9821,14 @@ postcss-modules-values@^3.0.0:
     postcss "^7.0.6"
 
 postcss-selector-parser@^6.0.0, postcss-selector-parser@^6.0.2:
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.0.2.tgz#934cf799d016c83411859e09dcecade01286ec5c"
-  integrity sha512-36P2QR59jDTOAiIkqEprfJDsoNrvwFei3eCqKd1Y0tUsBimsq39BLp7RD+JWny3WgB1zGhJX8XVePwm9k4wdBg==
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.0.3.tgz#766d77728728817cc140fa1ac6da5e77f9fada98"
+  integrity sha512-0ClFaY4X1ra21LRqbW6y3rUbWcxnSVkDFG57R7Nxus9J9myPFlv+jYDMohzpkBx0RrjjiqjtycpchQ+PLGmZ9w==
   dependencies:
     cssesc "^3.0.0"
     indexes-of "^1.0.1"
     uniq "^1.0.1"
+    util-deprecate "^1.0.2"
 
 postcss-simple-vars@^5.0.1:
   version "5.0.2"
@@ -10628,9 +10630,9 @@ regexpu-core@^2.0.0:
     regjsparser "^0.1.4"
 
 regexpu-core@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/regexpu-core/-/regexpu-core-4.7.0.tgz#fcbf458c50431b0bb7b45d6967b8192d91f3d938"
-  integrity sha512-TQ4KXRnIn6tz6tjnrXEkD/sshygKH/j5KzK86X8MkeHyZ8qst/LZ89j3X4/8HEIfHANTFIP/AbXakeRhWIl5YQ==
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/regexpu-core/-/regexpu-core-4.7.1.tgz#2dea5a9a07233298fbf0db91fa9abc4c6e0f8ad6"
+  integrity sha512-ywH2VUraA44DZQuRKzARmw6S66mr48pQVva4LBeRhcOltJ6hExvWly5ZjFLYo67xbIxb6W1q4bAGtgfEl20zfQ==
   dependencies:
     regenerate "^1.4.0"
     regenerate-unicode-properties "^8.2.0"
@@ -11040,17 +11042,7 @@ scratch-audio@0.1.0-prerelease.20200528195344, scratch-audio@latest:
     minilog "^3.0.1"
     startaudiocontext "1.2.1"
 
-scratch-l10n@3.10.20200909030847:
-  version "3.10.20200909030847"
-  resolved "https://registry.yarnpkg.com/scratch-l10n/-/scratch-l10n-3.10.20200909030847.tgz#bc09ba2238a35601953ec55641807ff406467d7a"
-  integrity sha512-e76/1VX3Fa30doaznY9nN8B7NSoxROpYTHZOiuJigwv0M4sgFaoCoJHYA5jhxQWKMHIl48BpS8q0rEeUpFcDZQ==
-  dependencies:
-    "@babel/cli" "^7.1.2"
-    "@babel/core" "^7.1.2"
-    babel-plugin-react-intl "^3.0.1"
-    transifex "1.6.6"
-
-scratch-l10n@^3.1.20181129221712, scratch-l10n@^3.10.20200617135753:
+scratch-l10n@3.10.20200916030802, scratch-l10n@^3.1.20181129221712, scratch-l10n@^3.10.20200617135753:
   version "3.10.20200916030802"
   resolved "https://registry.yarnpkg.com/scratch-l10n/-/scratch-l10n-3.10.20200916030802.tgz#cdc39c2646fad505133839b773007130109819f9"
   integrity sha512-K/PoJMY1/+8kU80r3rkKxcZqKn24lfTE4P5b6UQhKNUg/jKN3129LhHx3nIZ6gBla1x/CM2uLFgJ2Vr1wFYWIQ==
@@ -12698,7 +12690,7 @@ user-home@^2.0.0:
   dependencies:
     os-homedir "^1.0.0"
 
-util-deprecate@^1.0.1, util-deprecate@~1.0.1:
+util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
@@ -12952,9 +12944,9 @@ webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1:
     source-map "~0.6.1"
 
 webpack@^4.16.5, webpack@^4.22.0, webpack@^4.43.0, webpack@^4.6.0, webpack@^4.8.0:
-  version "4.44.1"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.44.1.tgz#17e69fff9f321b8f117d1fda714edfc0b939cc21"
-  integrity sha512-4UOGAohv/VGUNQJstzEywwNxqX417FnjZgZJpJQegddzPmTvph37eBIRbRTfdySXzVtJXLJfbMN3mMYhM6GdmQ==
+  version "4.44.2"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.44.2.tgz#6bfe2b0af055c8b2d1e90ed2cd9363f841266b72"
+  integrity sha512-6KJVGlCxYdISyurpQ0IPTklv+DULv05rs2hseIXer6D7KrUicRDLFb4IUM1S6LUAKypPM/nSiVSuv8jHu1m3/Q==
   dependencies:
     "@webassemblyjs/ast" "1.9.0"
     "@webassemblyjs/helper-module-context" "1.9.0"
