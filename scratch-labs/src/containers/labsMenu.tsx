@@ -3,12 +3,12 @@ import React from 'react'
 import { MenuItem, MenuItem2ndLayer } from '../components/menuItem'
 import { loadExtension } from '../extension'
 import { importFile } from '../project'
-import { saveAsSvg } from '../block'
+import { saveBlocksAsSvg } from '../block'
 import { translations } from '../translations'
 
 const DEFAULT_URL = 'https://'
 
-const MENU_ITEMS = (vm: any, options: any) => [
+const MENU_ITEMS = (vm: any) => [
   {
     label: translations.label('Load extension', { ellipsis: true }),
     onClick: () => {
@@ -23,20 +23,20 @@ const MENU_ITEMS = (vm: any, options: any) => [
       importFile(vm, url)
     },
   },
-  // {
-  //   label: translations.label('Save as SVG'),
-  //   onClick: () => {
-  //     saveAsSvg(vm, options.blockToImage)
-  //   },
-  // },
+  {
+    label: translations.label('Save blocks as SVG'),
+    onClick: () => {
+      saveBlocksAsSvg(vm)
+    },
+  },
 ]
 
-const LabsMenu: React.FC<{ vm: any; options: any }> = props => (
+const LabsMenu: React.FC<{ vm: any }> = props => (
   <MenuItem
     label={translations.label('Labs')}
     className="menu-bar_menu-bar-item_oLDa- menu-bar_hoverable_c6WFB labs-menu"
   >
-    {MENU_ITEMS(props.vm, props.options).map(item => (
+    {MENU_ITEMS(props.vm).map(item => (
       <MenuItem2ndLayer label={item.label} onClick={item.onClick} key={item.label} />
     ))}
   </MenuItem>

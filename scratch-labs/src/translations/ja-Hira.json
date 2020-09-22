@@ -4,7 +4,7 @@
   "URL for extension to be loaded": "よみこむかくちょうきのうへの URL",
   "Load file": "ファイルをよみこむ",
   "URL for file to be loaded": "よみこむファイルへの URL",
-  "Save as SVG": "SVG でほぞんする",
+  "Save blocks as SVG": "ブロックを SVG でほぞんする",
 
   "Capture": "キャプチャ"
 }
