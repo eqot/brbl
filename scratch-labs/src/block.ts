@@ -18,6 +18,7 @@ const INJECTED_STYLES = [
   'resize',
   'overflow',
   'stroke',
+  'filter',
 ]
 
 const XLINK = 'http://www.w3.org/1999/xlink'
@@ -25,6 +26,9 @@ const XLINK = 'http://www.w3.org/1999/xlink'
 export async function saveBlocksAsSvg(vm: any) {
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
   document.body.appendChild(svg)
+
+  const svgDefs = document.querySelector('svg.blocklySvg > defs').cloneNode(true)
+  svg.appendChild(svgDefs)
 
   for (const selector of TARGET_SELECTORS) {
     const blockSvg = document.querySelector(selector).cloneNode(true)
