@@ -4,6 +4,7 @@ import { MenuItem, MenuItem2ndLayer } from '../components/menuItem'
 import { loadExtension } from '../extension'
 import { importFile } from '../project'
 import { saveBlocksAsSvg } from '../block'
+import { openWindowForStage } from '../window'
 import { translations } from '../translations'
 
 const DEFAULT_URL = 'https://'
@@ -27,6 +28,12 @@ const MENU_ITEMS = (vm: any) => [
     label: translations.label('Save blocks as SVG'),
     onClick: () => {
       saveBlocksAsSvg(vm)
+    },
+  },
+  {
+    label: translations.label('Open window for stage'),
+    onClick: () => {
+      openWindowForStage(vm)
     },
   },
 ]
