@@ -168,7 +168,7 @@
       "summary": "Deploy to GitHub Pages",
       "description": "Deploy to GitHub Pages",
       "safeForSimultaneousRushProcesses": false,
-      "shellCommand": "touch ./vendor/scratch-gui/build/.nojekyll && ./vendor/scratch-gui/node_modules/.bin/gh-pages -t -d ./vendor/scratch-gui/build -m \"Build for $(git log --pretty=format:%H -n1)\""
+      "shellCommand": "cp ./scratch-labs/assets/misc/CNAME ./vendor/scratch-gui/build && touch ./vendor/scratch-gui/build/.nojekyll && ./vendor/scratch-gui/node_modules/.bin/gh-pages -t -d ./vendor/scratch-gui/build -m \"Build for $(git log --pretty=format:%H -n1)\""
     }
   ],
 
