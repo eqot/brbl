@@ -2,13 +2,16 @@ import GoogleAnalytics from 'react-ga';
 
 import log from './log';
 
-const GA_ID = (process.env.GA_ID || window.GA_ID);
+import {GATrackingId, GASettings} from 'scratch-labs';
+
+const GA_ID = (GATrackingId || process.env.GA_ID || window.GA_ID);
 if (GA_ID) {
     GoogleAnalytics.initialize(GA_ID, {
         debug: (process.env.NODE_ENV !== 'production'),
         titleCase: true,
         sampleRate: (process.env.NODE_ENV === 'production') ? 100 : 0,
-        forceSSL: true
+        forceSSL: true,
+        ...GASettings
     });
 } else {
     log.info('Disabling GA because GA_ID is not set.');
