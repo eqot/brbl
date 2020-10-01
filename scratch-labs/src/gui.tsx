@@ -6,7 +6,7 @@ import { LabsMenu } from './containers/labsMenu'
 import { CaptureMenu } from './containers/captureMenu'
 import { translations } from './translations'
 
-import logo from '../assets/images/scratch-labs.svg'
+import logo from '../assets/images/logo.png'
 
 export function modifyGui(vm: any) {
   replaceLogo()
