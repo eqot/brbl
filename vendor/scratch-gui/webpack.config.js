@@ -187,6 +187,10 @@ module.exports = [
                 context: 'node_modules/scratch-vm/dist/web'
             }]),
             new CopyWebpackPlugin([{
+                from: 'node_modules/scratch-labs/assets/favicon.png',
+                to: 'static'
+            }]),
+            new CopyWebpackPlugin([{
                 from: 'node_modules/canvas-record/node_modules/gif.js/dist',
                 to: 'static/gif'
             }])
