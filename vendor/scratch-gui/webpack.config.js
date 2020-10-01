@@ -12,6 +12,8 @@ var autoprefixer = require('autoprefixer');
 var postcssVars = require('postcss-simple-vars');
 var postcssImport = require('postcss-import');
 
+var TITLE = require('scratch-labs/src/title');
+
 const STATIC_PATH = process.env.STATIC_PATH || '/static';
 
 const base = {
@@ -146,26 +148,26 @@ module.exports = [
             new HtmlWebpackPlugin({
                 chunks: ['lib.min', 'gui'],
                 template: 'src/playground/index.ejs',
-                title: 'Scratch 3.0 GUI',
+                title: TITLE || 'Scratch 3.0 GUI',
                 sentryConfig: process.env.SENTRY_CONFIG ? '"' + process.env.SENTRY_CONFIG + '"' : null
             }),
             new HtmlWebpackPlugin({
                 chunks: ['lib.min', 'blocksonly'],
                 template: 'src/playground/index.ejs',
                 filename: 'blocks-only.html',
-                title: 'Scratch 3.0 GUI: Blocks Only Example'
+                title: TITLE || 'Scratch 3.0 GUI: Blocks Only Example'
             }),
             new HtmlWebpackPlugin({
                 chunks: ['lib.min', 'compatibilitytesting'],
                 template: 'src/playground/index.ejs',
                 filename: 'compatibility-testing.html',
-                title: 'Scratch 3.0 GUI: Compatibility Testing'
+                title: TITLE || 'Scratch 3.0 GUI: Compatibility Testing'
             }),
             new HtmlWebpackPlugin({
                 chunks: ['lib.min', 'player'],
                 template: 'src/playground/index.ejs',
                 filename: 'player.html',
-                title: 'Scratch 3.0 GUI: Player Example'
+                title: TITLE || 'Scratch 3.0 GUI: Player Example'
             }),
             new CopyWebpackPlugin([{
                 from: 'static',
