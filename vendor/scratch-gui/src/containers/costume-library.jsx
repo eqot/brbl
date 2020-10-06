@@ -8,7 +8,7 @@ import costumeLibraryContent from '../lib/libraries/costumes.json';
 import spriteTags from '../lib/libraries/sprite-tags';
 import LibraryComponent from '../components/library/library.jsx';
 
-import {removeTrademarks} from 'scratch-labs';
+import {removeTrademarkFromAssets} from 'scratch-labs';
 
 const messages = defineMessages({
     libraryTitle: {
@@ -43,7 +43,7 @@ class CostumeLibrary extends React.PureComponent {
     render () {
         return (
             <LibraryComponent
-                data={removeTrademarks(costumeLibraryContent)}
+                data={removeTrademarkFromAssets(costumeLibraryContent)}
                 id="costumeLibrary"
                 tags={spriteTags}
                 title={this.props.intl.formatMessage(messages.libraryTitle)}

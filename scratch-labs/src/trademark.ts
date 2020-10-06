@@ -23,11 +23,15 @@ const SCRATCH_COSTUME_NAMES = [
   'Giga Walk',
 ]
 
-export function removeTrademarks(assets: any[]) {
+export function removeTrademarkFromAssets(assets: any[]): any[] {
   return assets.filter((asset: any) => {
     return (
       !SCRATCH_SPRITE_NAMES.includes(asset.name) &&
       !SCRATCH_COSTUME_NAMES.some((costumeName: string) => asset.name.startsWith(costumeName))
     )
   })
+}
+
+export function removeTrademarkFromLabel(label: string): string {
+  return label.replace(/\s?Scratch[\sの]?/g, '')
 }

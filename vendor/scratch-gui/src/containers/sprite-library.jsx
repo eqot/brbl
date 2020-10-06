@@ -10,7 +10,7 @@ import spriteTags from '../lib/libraries/sprite-tags';
 
 import LibraryComponent from '../components/library/library.jsx';
 
-import {removeTrademarks} from 'scratch-labs';
+import {removeTrademarkFromAssets} from 'scratch-labs';
 
 const messages = defineMessages({
     libraryTitle: {
@@ -37,7 +37,7 @@ class SpriteLibrary extends React.PureComponent {
     render () {
         return (
             <LibraryComponent
-                data={removeTrademarks(spriteLibraryContent)}
+                data={removeTrademarkFromAssets(spriteLibraryContent)}
                 id="spriteLibrary"
                 tags={spriteTags}
                 title={this.props.intl.formatMessage(messages.libraryTitle)}

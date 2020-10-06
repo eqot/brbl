@@ -9,6 +9,8 @@ import {
 } from '../reducers/project-state';
 import {setProjectTitle} from '../reducers/project-title';
 
+import {removeTrademarkFromLabel} from 'scratch-labs';
+
 const messages = defineMessages({
     defaultProjectTitle: {
         id: 'gui.gui.defaultProjectTitle',
@@ -46,7 +48,7 @@ const TitledHOC = function (WrappedComponent) {
         handleReceivedProjectTitle (requestedTitle) {
             let newTitle = requestedTitle;
             if (newTitle === null || typeof newTitle === 'undefined') {
-                newTitle = this.props.intl.formatMessage(messages.defaultProjectTitle);
+                newTitle = removeTrademarkFromLabel(this.props.intl.formatMessage(messages.defaultProjectTitle));
             }
             this.props.onChangedProjectTitle(newTitle);
             return newTitle;
