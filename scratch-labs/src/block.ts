@@ -30,12 +30,37 @@ export async function saveBlocksAsSvg(vm: any) {
   const svgDefs = document.querySelector('svg.blocklySvg > defs').cloneNode(true)
   svg.appendChild(svgDefs)
 
+  let xMin = 10000
+  let xMax = 0
+  let yMin = 10000
+  let yMax = 0
+
   for (const selector of TARGET_SELECTORS) {
     const blockSvg = document.querySelector(selector).cloneNode(true)
-    if (blockSvg) {
-      svg.appendChild(blockSvg)
+    if (!blockSvg) {
+      continue
+    }
+
+    blockSvg.setAttribute('transform', `translate(${0} ${0})`)
+    svg.appendChild(blockSvg)
+
+    const rect = blockSvg.getBBox()
+    if (rect.width > 0 && rect.height > 0) {
+      xMin = Math.min(xMin, rect.x)
+      xMax = Math.max(xMax, rect.x + rect.width)
+      yMin = Math.min(yMin, rect.y)
+      yMax = Math.max(yMax, rect.y + rect.height)
     }
   }
+
+  const x = xMin
+  const y = yMin
+  const width = xMax - xMin
+  const height = yMax - yMin
+
+  svg.setAttribute('width', `${width}`)
+  svg.setAttribute('height', `${height}`)
+  svg.setAttribute('viewBox', `${x} ${y} ${width} ${height}`)
 
   computedStyleToInlineStyle(svg, {
     recursive: true,
@@ -57,21 +82,45 @@ export async function saveBlocksAsSvg(vm: any) {
   })
 
   const svgString = new XMLSerializer().serializeToString(svg)
-  const image = `data:image/svg+xml;utf-8,${encodeURIComponent(svgString)}`
+  // const image = `data:image/svg+xml;utf-8,${encodeURIComponent(svgString)}`
+  const image2 =
+    'data:image/svg+xml;charset=utf-8;base64,' + btoa(unescape(encodeURIComponent(svgString)))
 
   document.body.removeChild(svg)
 
   const fileName = Date.now()
-  download(image, `${fileName}.svg`, 'image/svg+xml')
+  download(image2, `${fileName}.svg`, 'image/svg+xml')
+
+  // convertSVGtoPNG(image2, width, height)
 }
 
 function modifyNodes(node, modifiers: any) {
-  const func = modifiers[node.localName]
-  if (func) {
-    func(node)
+  const modifier = modifiers[node.localName]
+  if (modifier) {
+    modifier(node)
   }
 
   for (const child of node.childNodes) {
     modifyNodes(child, modifiers)
   }
+}
+
+function convertSVGtoPNG(dataUrl: string, width: number, height: number) {
+  // console.log(dataUrl, width, height)
+
+  const canvas = document.createElement('canvas')
+  canvas.width = width
+  canvas.height = height
+  const context = canvas.getContext('2d')
+
+  const image = new Image()
+  image.onload = () => {
+    // context.drawImage(image, 0, 0, image.width, image.height)
+    context.drawImage(image, 0, 0)
+    const imageData = canvas.toDataURL('image/png')
+    // console.log(imageData)
+
+    download(imageData, 'foo.png', 'image/png')
+  }
+  image.src = dataUrl
 }
