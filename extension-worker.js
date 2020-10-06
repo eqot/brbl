@@ -87,9 +87,9 @@
 /******/ ({
 
 /***/ "../../common/temp/node_modules/babel-loader/lib/index.js?!./node_modules/scratch-vm/src/extension-support/extension-worker.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** /Users/eqo/src/private/scratch3/brbl/common/temp/node_modules/babel-loader/lib??ref--4!./node_modules/scratch-vm/src/extension-support/extension-worker.js ***!
-  \******************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** /Users/eqo/src/private/scratch3/sclabs/common/temp/node_modules/babel-loader/lib??ref--4!./node_modules/scratch-vm/src/extension-support/extension-worker.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
