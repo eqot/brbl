@@ -102,7 +102,7 @@ const MenuBarItemTooltip = ({
             </React.Fragment>
         );
     }
-    return (
+    return null && (
         <ComingSoonTooltip
             className={classNames(styles.comingSoon, className)}
             place={place}
