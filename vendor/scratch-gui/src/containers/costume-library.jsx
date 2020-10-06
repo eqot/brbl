@@ -8,6 +8,8 @@ import costumeLibraryContent from '../lib/libraries/costumes.json';
 import spriteTags from '../lib/libraries/sprite-tags';
 import LibraryComponent from '../components/library/library.jsx';
 
+import {removeTrademarks} from 'scratch-labs';
+
 const messages = defineMessages({
     libraryTitle: {
         defaultMessage: 'Choose a Costume',
@@ -41,7 +43,7 @@ class CostumeLibrary extends React.PureComponent {
     render () {
         return (
             <LibraryComponent
-                data={costumeLibraryContent}
+                data={removeTrademarks(costumeLibraryContent)}
                 id="costumeLibrary"
                 tags={spriteTags}
                 title={this.props.intl.formatMessage(messages.libraryTitle)}
