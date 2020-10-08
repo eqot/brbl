@@ -14,7 +14,7 @@ import {
     projectError
 } from '../reducers/project-state';
 
-import {loadExtension, loadProject, importFile, startProject, modifyGui} from 'sclabs';
+import {modifyGui, loadExtension, loadProject, importFile, startProject} from 'sclabs';
 
 /*
  * Higher Order Component to manage events emitted by the VM

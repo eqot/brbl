@@ -5,20 +5,23 @@ import Runtime from 'scratch-vm/src/engine/runtime'
 import { LabsMenu } from './containers/labsMenu'
 import { CaptureMenu } from './containers/captureMenu'
 import { translations } from './translations'
-
-import logo from '../assets/images/logo.png'
+import { Configuration } from './configuration'
 
 export function modifyGui(vm: any) {
+  replaceFavicon()
   replaceLogo()
   injectMenu(vm)
 }
 
-function replaceLogo() {
-  const originalLogo = document.querySelector('img[alt="Scratch"]') as HTMLImageElement
-  originalLogo.src = logo
+function replaceFavicon() {
+  const favicon = document.querySelector('link[rel="shortcut icon"]') as HTMLLinkElement
+  favicon.href = Configuration.favicon
 }
 
-export function onClickLogoForLabs() {}
+function replaceLogo() {
+  const originalLogo = document.querySelector('img[alt="Scratch"]') as HTMLImageElement
+  originalLogo.src = Configuration.logo
+}
 
 function injectMenu(vm: any) {
   const element = document.querySelector('.labs-menu')
@@ -43,3 +46,5 @@ function doInjectMenu(vm: any) {
   controlsRoot.appendChild(controlItem)
   ReactDOM.render(<CaptureMenu vm={vm} />, controlItem)
 }
+
+export function onClickLogoCustomized() {}

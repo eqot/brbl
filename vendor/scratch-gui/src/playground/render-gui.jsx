@@ -7,7 +7,7 @@ import GUI from '../containers/gui.jsx';
 import HashParserHOC from '../lib/hash-parser-hoc.jsx';
 import log from '../lib/log.js';
 
-import {onClickLogoForLabs, isFullScreen} from 'sclabs';
+import {onClickLogoCustomized, isFullScreen} from 'sclabs';
 
 const onClickLogo = () => {
     window.location = 'https://scratch.mit.edu';
@@ -82,7 +82,7 @@ export default appTarget => {
                 showComingSoon
                 backpackHost={backpackHost}
                 canSave={false}
-                onClickLogo={onClickLogoForLabs}
+                onClickLogo={onClickLogoCustomized}
             />,
         appTarget);
 };
