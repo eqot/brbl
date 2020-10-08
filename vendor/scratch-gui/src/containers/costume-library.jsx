@@ -8,7 +8,7 @@ import costumeLibraryContent from '../lib/libraries/costumes.json';
 import spriteTags from '../lib/libraries/sprite-tags';
 import LibraryComponent from '../components/library/library.jsx';
 
-import {removeTrademarkFromAssets} from 'scratch-labs';
+import {removeTrademarkFromAssets} from 'sclabs';
 
 const messages = defineMessages({
     libraryTitle: {

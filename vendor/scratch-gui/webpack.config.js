@@ -12,7 +12,7 @@ var autoprefixer = require('autoprefixer');
 var postcssVars = require('postcss-simple-vars');
 var postcssImport = require('postcss-import');
 
-var TITLE = require('scratch-labs/src/title');
+var TITLE = require('sclabs/src/title');
 
 const STATIC_PATH = process.env.STATIC_PATH || '/static';
 
@@ -187,7 +187,7 @@ module.exports = [
                 context: 'node_modules/scratch-vm/dist/web'
             }]),
             new CopyWebpackPlugin([{
-                from: 'node_modules/scratch-labs/assets/favicon.png',
+                from: 'node_modules/sclabs/assets/favicon.png',
                 to: 'static'
             }]),
             new CopyWebpackPlugin([{

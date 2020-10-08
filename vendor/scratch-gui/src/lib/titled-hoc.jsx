@@ -9,7 +9,7 @@ import {
 } from '../reducers/project-state';
 import {setProjectTitle} from '../reducers/project-title';
 
-import {removeTrademarkFromLabel} from 'scratch-labs';
+import {removeTrademarkFromLabel} from 'sclabs';
 
 const messages = defineMessages({
     defaultProjectTitle: {

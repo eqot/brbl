@@ -16,7 +16,7 @@
    * path segment in the "$schema" field for all your Rush config files.  This will ensure
    * correct error-underlining and tab-completion for editors such as VS Code.
    */
-  "rushVersion": "5.30.1",
+  "rushVersion": "5.34.3",
 
   /**
    * The next field selects which package manager should be installed and determines its version.
@@ -27,9 +27,8 @@
    * for details about these alternatives.
    */
   // "pnpmVersion": "4.14.4",
-
   // "npmVersion": "4.5.0",
-  "yarnVersion": "1.22.4",
+  "yarnVersion": "1.22.10",
 
   /**
    * Options that are only used when the PNPM package manager is selected
@@ -453,8 +452,8 @@
       "projectFolder": "vendor/scratch-render"
     },
     {
-      "packageName": "scratch-labs",
-      "projectFolder": "scratch-labs"
+      "packageName": "sclabs",
+      "projectFolder": "sclabs"
     },
     {
       "packageName": "canvas-record",

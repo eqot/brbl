@@ -4,7 +4,7 @@ const maybeFormatMessage = require('../util/maybe-format-message');
 
 const BlockType = require('./block-type');
 
-const {isExtensionLoaded} = require('scratch-labs');
+const {isExtensionLoaded} = require('sclabs');
 
 // These extensions are currently built into the VM repository but should not be loaded at startup.
 // TODO: move these out into a separate repository?

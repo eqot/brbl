@@ -2,7 +2,7 @@ import GoogleAnalytics from 'react-ga';
 
 import log from './log';
 
-import {GATrackingId, GASettings} from 'scratch-labs';
+import {GATrackingId, GASettings} from 'sclabs';
 
 const GA_ID = (GATrackingId || process.env.GA_ID || window.GA_ID);
 if (GA_ID) {

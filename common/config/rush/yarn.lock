@@ -1095,6 +1095,33 @@
     webpack "^4.43.0"
     webpack-cli "^3.3.12"
 
+"@rush-temp/sclabs@file:./projects/sclabs.tgz":
+  version "0.0.0"
+  resolved "file:./projects/sclabs.tgz#116ad5c67f39de16a590487317238c9fa1dceff9"
+  dependencies:
+    "@babel/core" "^7.10.5"
+    "@babel/plugin-proposal-class-properties" "^7.10.4"
+    "@babel/plugin-transform-runtime" "^7.10.5"
+    "@babel/preset-env" "^7.10.4"
+    "@babel/preset-react" "~7.10.4"
+    "@babel/preset-typescript" "^7.10.4"
+    "@types/react" "~16.9.47"
+    "@types/react-dom" "~16.9.8"
+    babel-loader "^8.1.0"
+    base64-js "^1.3.1"
+    computed-style-to-inline-style "~3.0.0"
+    css-loader "~4.2.2"
+    downloadjs "~1.4.7"
+    format-message "~6.2.3"
+    query-string "^6.13.1"
+    react "~16.13.1"
+    react-dom "~16.13.1"
+    scratch-parser "~5.0.0"
+    style-loader "~1.2.1"
+    url-loader "~4.1.0"
+    webpack "^4.43.0"
+    webpack-cli "^3.3.12"
+
 "@rush-temp/scratch-blocks@file:./projects/scratch-blocks.tgz":
   version "0.0.0"
   resolved "file:./projects/scratch-blocks.tgz#9d17cfd6b5dfa70f08cd3b98e89679c0423233fd"
@@ -1123,7 +1150,7 @@
 
 "@rush-temp/scratch-gui@file:./projects/scratch-gui.tgz":
   version "0.0.0"
-  resolved "file:./projects/scratch-gui.tgz#11f0fa4e7bc25c78a5ba9a1d3ba80da518c0d921"
+  resolved "file:./projects/scratch-gui.tgz#365af001ac293177dd4fed6ad1e4a111f0a03903"
   dependencies:
     "@babel/cli" "^7.1.2"
     "@babel/core" "^7.1.2"
@@ -1218,33 +1245,6 @@
     webpack-dev-server "^3.1.3"
     xhr "2.5.0"
 
-"@rush-temp/scratch-labs@file:./projects/scratch-labs.tgz":
-  version "0.0.0"
-  resolved "file:./projects/scratch-labs.tgz#03c79466dd546cfbe92319086d64fb8e5c4d86cd"
-  dependencies:
-    "@babel/core" "^7.10.5"
-    "@babel/plugin-proposal-class-properties" "^7.10.4"
-    "@babel/plugin-transform-runtime" "^7.10.5"
-    "@babel/preset-env" "^7.10.4"
-    "@babel/preset-react" "~7.10.4"
-    "@babel/preset-typescript" "^7.10.4"
-    "@types/react" "~16.9.47"
-    "@types/react-dom" "~16.9.8"
-    babel-loader "^8.1.0"
-    base64-js "^1.3.1"
-    computed-style-to-inline-style "~3.0.0"
-    css-loader "~4.2.2"
-    downloadjs "~1.4.7"
-    format-message "~6.2.3"
-    query-string "^6.13.1"
-    react "~16.13.1"
-    react-dom "~16.13.1"
-    scratch-parser "~5.0.0"
-    style-loader "~1.2.1"
-    url-loader "~4.1.0"
-    webpack "^4.43.0"
-    webpack-cli "^3.3.12"
-
 "@rush-temp/scratch-render@file:./projects/scratch-render.tgz":
   version "0.0.0"
   resolved "file:./projects/scratch-render.tgz#4b1b919dba1a898ddc849bff378255118aaa4f2d"
@@ -1281,7 +1281,7 @@
 
 "@rush-temp/scratch-vm@file:./projects/scratch-vm.tgz":
   version "0.0.0"
-  resolved "file:./projects/scratch-vm.tgz#ac48e5395f615b4c37202d410288f097efa27f12"
+  resolved "file:./projects/scratch-vm.tgz#fd3c30e975bccf9b4b34aa091d39acaa6b7d490d"
   dependencies:
     "@babel/core" "^7.1.2"
     "@babel/preset-env" "^7.1.0"
@@ -1420,9 +1420,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*":
-  version "14.11.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.11.4.tgz#bf6ea3d5f7b1504232b11acbc40e1ac4c750d3b9"
-  integrity sha512-KmoLCUeW2cWKkEOQ0gQcECuqOc0g7B7zcmRPQNMT4ntNm0luKv3BTLcqIyWpTxkhLDzLTdMus11j/6DROaZdPw==
+  version "14.11.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.11.5.tgz#fecad41c041cae7f2404ad4b2d0742fdb628b305"
+  integrity sha512-jVFzDV6NTbrLMxm4xDSIW/gKnk8rQLF9wAzLWIOg+5nU6ACrIMndeBdXci0FGtqJbP9tQvm6V39eshc96TO2wQ==
 
 "@types/prop-types@*":
   version "15.7.3"
@@ -3300,9 +3300,9 @@ camelcase@^6.0.0:
   integrity sha512-8KMDF1Vz2gzOq54ONPJS65IvTUaB1cHJ2DMM7MbPmLZljDH1qpzzLsWdiN9pHh6qvkRVDTi/07+eNGch/oLU4w==
 
 caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001135:
-  version "1.0.30001143"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001143.tgz#560f2cfb9f313d1d7e52eb8dac0e4e36c8821c0d"
-  integrity sha512-p/PO5YbwmCpBJPxjOiKBvAlUPgF8dExhfEpnsH+ys4N/791WHrYrGg0cyHiAURl5hSbx5vIcjKmQAP6sHDYH3w==
+  version "1.0.30001146"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001146.tgz#c61fcb1474520c1462913689201fb292ba6f447c"
+  integrity sha512-VAy5RHDfTJhpxnDdp2n40GPPLp3KqNrXz1QqFv4J64HvArKs8nuNMOWkB3ICOaBTU/Aj4rYAo/ytdQDDFF/Pug==
 
 canvas-toBlob@1.0.0:
   version "1.0.0"
@@ -4499,9 +4499,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.47, electron-to-chromium@^1.3.571:
-  version "1.3.577"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.577.tgz#9885f3f72c6e3367010b461ff6f2d9624a929720"
-  integrity sha512-dSb64JQSFif/pD8mpVAgSFkbVi6YHbK6JeEziwNNmXlr/Ne2rZtseFK5SM7JoWSLf6gP0gVvRGi4/2ZRhSX/rA==
+  version "1.3.578"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.578.tgz#e6671936f4571a874eb26e2e833aa0b2c0b776e0"
+  integrity sha512-z4gU6dA1CbBJsAErW5swTGAaU2TBzc2mPAonJb00zqW1rOraDo2zfBMDRvaz9cVic+0JEZiYbHWPw/fTaZlG2Q==
 
 elliptic@^6.5.3:
   version "6.5.3"
@@ -11059,9 +11059,9 @@ scratch-l10n@3.10.20200916030802:
     transifex "1.6.6"
 
 scratch-l10n@^3.1.20181129221712, scratch-l10n@^3.10.20200617135753:
-  version "3.10.20200930030848"
-  resolved "https://registry.yarnpkg.com/scratch-l10n/-/scratch-l10n-3.10.20200930030848.tgz#3d000490a43fc857fa7b76125ead0664c79cedcb"
-  integrity sha512-le0rADSsH4Tw30XjcQF3IcQ1VKcpB/KFRUUT2Uo8/y5az0G3cf4ksL7mo8qu2AO47EGOLC/Mrztt6neaYVN86Q==
+  version "3.10.20201007030856"
+  resolved "https://registry.yarnpkg.com/scratch-l10n/-/scratch-l10n-3.10.20201007030856.tgz#5dfb8cfbde04099f0e6a4091b4c93e6f847f72a8"
+  integrity sha512-VEOh3az+rU7GNi5rpG2n4kp75DMi+B/YBrEt4N6/tYl02XY2AF6PK1vsaRgq7zR0SZ+mIBDiAG2iYjtEAh3fsQ==
   dependencies:
     "@babel/cli" "^7.1.2"
     "@babel/core" "^7.1.2"
@@ -12431,9 +12431,9 @@ tsconfig-paths@^3.9.0:
     strip-bom "^3.0.0"
 
 tslib@^1.9.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
-  integrity sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.0.tgz#d624983f3e2c5e0b55307c3dd6c86acd737622c6"
+  integrity sha512-+Zw5lu0D9tvBMjGP8LpvMb0u2WW2QV3y+D8mO6J+cNzCYIN4sVy43Bf9vl92nqFahutN0I8zHa7cc4vihIshnw==
 
 tty-browserify@0.0.0:
   version "0.0.0"
