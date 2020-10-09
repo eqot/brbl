@@ -163,8 +163,8 @@
       "ignoreMissingScript": true
     },
     {
-      "commandKind": "global",
       "name": "gh-pages",
+      "commandKind": "global",
       "summary": "Deploy to GitHub Pages",
       "description": "Deploy to GitHub Pages",
       "safeForSimultaneousRushProcesses": false,

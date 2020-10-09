@@ -6,6 +6,7 @@ import { LabsMenu } from './containers/labsMenu'
 import { CaptureMenu } from './containers/captureMenu'
 import { translations } from './translations'
 import { Configuration } from './configuration'
+import { getQueries } from './utils'
 
 export function modifyGui(vm: any) {
   replaceFavicon()
@@ -48,3 +49,9 @@ function doInjectMenu(vm: any) {
 }
 
 export function onClickLogoCustomized() {}
+
+export function isFullScreen() {
+  const queries = getQueries()
+
+  return queries.fullscreen
+}
