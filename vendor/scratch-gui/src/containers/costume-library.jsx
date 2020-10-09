@@ -4,11 +4,9 @@ import React from 'react';
 import {defineMessages, injectIntl, intlShape} from 'react-intl';
 import VM from 'scratch-vm';
 
-import costumeLibraryContent from '../lib/libraries/costumes.json';
+import costumeLibraryContent from '../lib/libraries/costumes.js';
 import spriteTags from '../lib/libraries/sprite-tags';
 import LibraryComponent from '../components/library/library.jsx';
-
-import {removeTrademarkFromAssets} from 'sclabs';
 
 const messages = defineMessages({
     libraryTitle: {
@@ -43,7 +41,7 @@ class CostumeLibrary extends React.PureComponent {
     render () {
         return (
             <LibraryComponent
-                data={removeTrademarkFromAssets(costumeLibraryContent)}
+                data={costumeLibraryContent}
                 id="costumeLibrary"
                 tags={spriteTags}
                 title={this.props.intl.formatMessage(messages.libraryTitle)}

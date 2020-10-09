@@ -25,10 +25,18 @@ const SCRATCH_COSTUME_NAMES = [
 
 export function removeTrademarkFromAssets(assets: any[]): any[] {
   return assets.filter((asset: any) => {
-    return (
-      !SCRATCH_SPRITE_NAMES.includes(asset.name) &&
-      !SCRATCH_COSTUME_NAMES.some((costumeName: string) => asset.name.startsWith(costumeName))
-    )
+    switch (asset.type) {
+      case 'sprite':
+        return !SCRATCH_SPRITE_NAMES.includes(asset.name)
+
+      case 'costume':
+        return !SCRATCH_COSTUME_NAMES.some((costumeName: string) =>
+          asset.name.startsWith(costumeName)
+        )
+
+      default:
+        return true
+    }
   })
 }
 

@@ -2,17 +2,18 @@ import base64js from 'base64-js'
 import scratchParser from 'scratch-parser'
 import updateBlockIds from 'scratch-vm/src/util/new-block-ids'
 
+import { Configuration } from './configuration'
 import { getQueries, fetchFile } from './utils'
 
 export async function loadProject(): Promise<ArrayBuffer | void> {
   const queries = getQueries()
 
-  if (queries.prj) {
-    return loadProjectByUrl(queries.prj)
+  if (queries.project) {
+    return loadProjectByUrl(queries.project)
   }
 
-  if (queries.prj64) {
-    return loadBase64ProjectInUrl(queries.prj64)
+  if (queries.project64) {
+    return loadBase64ProjectInUrl(queries.project64)
   }
 }
 
@@ -30,6 +31,16 @@ async function loadProjectByUrl(url: string): Promise<ArrayBuffer | void> {
 function loadBase64ProjectInUrl(base64): ArrayBuffer {
   const { buffer } = base64js.toByteArray(base64) as Uint8Array
 
+  return buffer
+}
+
+export function getDefaultProject() {
+  if (!Configuration.defaultProject) {
+    return
+  }
+
+  const base64string = Configuration.defaultProject.replace('data:;base64,', '')
+  const { buffer } = base64js.toByteArray(base64string) as Uint8Array
   return buffer
 }
 

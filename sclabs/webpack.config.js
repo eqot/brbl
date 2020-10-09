@@ -39,6 +39,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.sb3/,
+        loader: 'url-loader',
+      },
     ],
   },
 }

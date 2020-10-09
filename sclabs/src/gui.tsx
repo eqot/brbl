@@ -9,20 +9,18 @@ import { Configuration } from './configuration'
 import { getQueries } from './utils'
 
 export function modifyGui(vm: any) {
-  replaceFavicon()
-  replaceLogo()
+  // replace favicon
+  const favicon = document.querySelector('link[rel="shortcut icon"]') as HTMLLinkElement;
+  favicon.href = Configuration.favicon;
+
+  // replace logo
+  const originalLogo = document.querySelector('img[alt="Scratch"]') as HTMLImageElement;
+  originalLogo.src = Configuration.logo;
+
   injectMenu(vm)
 }
 
-function replaceFavicon() {
-  const favicon = document.querySelector('link[rel="shortcut icon"]') as HTMLLinkElement
-  favicon.href = Configuration.favicon
-}
-
-function replaceLogo() {
-  const originalLogo = document.querySelector('img[alt="Scratch"]') as HTMLImageElement
-  originalLogo.src = Configuration.logo
-}
+export function onClickLogoCustomized() {}
 
 function injectMenu(vm: any) {
   const element = document.querySelector('.labs-menu')
@@ -47,8 +45,6 @@ function doInjectMenu(vm: any) {
   controlsRoot.appendChild(controlItem)
   ReactDOM.render(<CaptureMenu vm={vm} />, controlItem)
 }
-
-export function onClickLogoCustomized() {}
 
 export function isFullScreen() {
   const queries = getQueries()
