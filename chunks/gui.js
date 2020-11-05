@@ -136,8 +136,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _containers_gui_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../containers/gui.jsx */ "./src/containers/gui.jsx");
 /* harmony import */ var _lib_hash_parser_hoc_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/hash-parser-hoc.jsx */ "./src/lib/hash-parser-hoc.jsx");
 /* harmony import */ var _lib_log_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/log.js */ "./src/lib/log.js");
-/* harmony import */ var scratch_labs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! scratch-labs */ "./node_modules/scratch-labs/dist/index.js");
-/* harmony import */ var scratch_labs__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(scratch_labs__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var sclabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sclabs */ "./node_modules/sclabs/dist/index.js");
+/* harmony import */ var sclabs__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sclabs__WEBPACK_IMPORTED_MODULE_7__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 
@@ -207,12 +207,12 @@ var handleTelemetryModalOptOut = function handleTelemetryModalOptOut() {
     onTelemetryModalOptOut: handleTelemetryModalOptOut
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WrappedGui, {
     canEditTitle: true,
-    isFullScreen: Object(scratch_labs__WEBPACK_IMPORTED_MODULE_7__["isFullScreen"])(),
+    isFullScreen: Object(sclabs__WEBPACK_IMPORTED_MODULE_7__["isFullScreen"])(),
     backpackVisible: true,
     showComingSoon: true,
     backpackHost: backpackHost,
     canSave: false,
-    onClickLogo: scratch_labs__WEBPACK_IMPORTED_MODULE_7__["onClickLogoForLabs"]
+    onClickLogo: sclabs__WEBPACK_IMPORTED_MODULE_7__["onClickLogoCustomized"]
   }), appTarget);
 });
 
