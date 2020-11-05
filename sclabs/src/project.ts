@@ -19,7 +19,7 @@ export async function loadProject(): Promise<ArrayBuffer | void> {
 
 async function loadProjectByUrl(url: string): Promise<ArrayBuffer | void> {
   const response = await fetchFile(url)
-  if (!response.ok) {
+  if (!response || !response.ok) {
     return
   }
 

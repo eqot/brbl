@@ -14,7 +14,10 @@ export async function fetchFile(url: string): Promise<any> {
 
   const request = new Request(url, { mode: 'cors' })
 
-  const response = await fetch(request)
+  let response
+  try {
+    response = await fetch(request)
+  } catch (e) {}
 
   return response
 }

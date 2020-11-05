@@ -25,7 +25,7 @@ export async function loadExtension(vm: any, url?: string) {
     // _registerInternalExtension() to bypass the issue.
 
     const response = await fetchFile(extensionUrl)
-    if (!response.ok) {
+    if (!response || !response.ok) {
       return
     }
 
