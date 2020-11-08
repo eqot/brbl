@@ -6,11 +6,16 @@ if (!window.loadedExtensions) {
 }
 
 export const presetExtensions = Configuration.presetExtensions
+  .map(extension => (extension.extension ? extension.extension : extension))
   .map(extension => typeof extension.getInfoForGui === 'function' && extension.getInfoForGui())
   .filter(extensionInfo => extensionInfo !== null)
 
 export async function loadPresetExtensions(vm: any, url?: string) {
-  for (const extension of Configuration.presetExtensions) {
+  const extensions = Configuration.presetExtensions
+    .filter(extension => extension.activated || typeof extension.getInfoForGui === 'function')
+    .map(extension => (extension.extension ? extension.extension : extension))
+
+  for (let extension of extensions) {
     doLoadExtension(vm, extension)
   }
 }
