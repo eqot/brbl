@@ -14,7 +14,15 @@ import {
     projectError
 } from '../reducers/project-state';
 
-import {modifyGui, loadExtension, loadProject, getDefaultProject, importFile, startProject} from 'sclabs';
+import {
+    modifyGui,
+    loadPresetExtensions,
+    loadExtension,
+    loadProject,
+    getDefaultProject,
+    importFile,
+    startProject
+} from 'sclabs';
 
 /*
  * Higher Order Component to manage events emitted by the VM
@@ -31,6 +39,7 @@ const vmManagerHOC = function (WrappedComponent) {
         }
         componentDidMount () {
             modifyGui(this.props.vm);
+            loadPresetExtensions(this.props.vm);
             loadExtension(this.props.vm);
 
             if (!this.props.vm.initialized) {

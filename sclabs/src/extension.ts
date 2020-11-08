@@ -1,7 +1,18 @@
 import { getQueries, fetchFile } from './utils'
+import { Configuration } from './configuration'
 
 if (!window.loadedExtensions) {
   window.loadedExtensions = new Map()
+}
+
+export const presetExtensions = Configuration.presetExtensions
+  .map(extension => typeof extension.getInfoForGui === 'function' && extension.getInfoForGui())
+  .filter(extensionInfo => extensionInfo !== null)
+
+export async function loadPresetExtensions(vm: any, url?: string) {
+  for (const extension of Configuration.presetExtensions) {
+    doLoadExtension(vm, extension)
+  }
 }
 
 export async function loadExtension(vm: any, url?: string) {
@@ -10,13 +21,7 @@ export async function loadExtension(vm: any, url?: string) {
     return
   }
 
-  const { extensionManager } = vm
-
   for (const extensionUrl of extensionUrls) {
-    if (isExtensionLoaded(extensionUrl, vm)) {
-      continue
-    }
-
     // await vm.extensionManager.loadExtensionURL(extensionUrl)
 
     // TODO: The following code should be replace with loadExtensionURL().
@@ -42,17 +47,29 @@ export async function loadExtension(vm: any, url?: string) {
       return
     }
 
-    const extensionInstance = new extension(extensionManager.runtime, vm.getLocale())
-    const serviceName = extensionManager._registerInternalExtension(extensionInstance)
-    extensionManager._loadedExtensions.set(extensionUrl, serviceName)
-
-    window.loadedExtensions.set(extensionInstance.getInfo().id, extensionInstance)
+    doLoadExtension(vm, extension)
   }
 }
 
-export function isExtensionLoaded(extensionUrl: string, vm: any) {
+function doLoadExtension(vm, extension): void {
+  const { extensionManager } = vm
+
+  const extensionInstance = new extension(extensionManager.runtime, vm.getLocale())
+  const id = extensionInstance.getInfo().id
+
+  if (isExtensionLoaded(id, vm)) {
+    return
+  }
+
+  const serviceName = extensionManager._registerInternalExtension(extensionInstance)
+  extensionManager._loadedExtensions.set(id, serviceName)
+
+  window.loadedExtensions.set(id, extensionInstance)
+}
+
+export function isExtensionLoaded(id: string, vm?: any) {
   return (
-    window.loadedExtensions.has(extensionUrl) ||
-    (vm && vm.extensionManager && vm.extensionManager.isExtensionLoaded(extensionUrl))
+    window.loadedExtensions.has(id) ||
+    (vm && vm.extensionManager && vm.extensionManager.isExtensionLoaded(id))
   )
 }

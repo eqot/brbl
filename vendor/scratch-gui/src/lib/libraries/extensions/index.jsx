@@ -46,7 +46,11 @@ import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
 import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
+
+import {presetExtensions} from 'sclabs';
+
 export default [
+    ...presetExtensions,
     {
         name: (
             <FormattedMessage
